@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:task1/utils/global.dart';
 
@@ -175,8 +176,7 @@ class _HomeState extends State<Home> {
                           child: ClipRRect(
                             child: SizedBox.fromSize(
                               size: Size.fromRadius(8), // Image radius
-                              child: Image.asset(
-                                  'assets/images/3.png',
+                              child: Image.asset('assets/images/3.png',
                                   fit: BoxFit.fitWidth),
                             ),
                           ),
@@ -197,8 +197,7 @@ class _HomeState extends State<Home> {
                           child: ClipRRect(
                             child: SizedBox.fromSize(
                               size: Size.fromRadius(8), // Image radius
-                              child: Image.asset(
-                                  'assets/images/4.png',
+                              child: Image.asset('assets/images/4.png',
                                   fit: BoxFit.fitWidth),
                             ),
                           ),
@@ -207,65 +206,253 @@ class _HomeState extends State<Home> {
                           height: MediaQuery.of(context).size.height * 0.0758,
                           width: MediaQuery.of(context).size.width * 0.03,
                         ),
-                        Container(
-                          height: MediaQuery.of(context).size.height * 0.0758,
-                          width: MediaQuery.of(context).size.width * 0.4256,
-                          padding: EdgeInsets.all(1), // Border width
-                          decoration: ShapeDecoration(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(8))),
-                              color: specialtextcolour),
-                          child: ClipRRect(
-                            child: SizedBox.fromSize(
-                              size: Size.fromRadius(8), // Image radius
-                              child: Image.asset(
-                                  'assets/images/5.png',
-                                  fit: BoxFit.fitWidth),
+                        Stack(children: <Widget>[
+                          Container(
+                            height: MediaQuery.of(context).size.height * 0.0758,
+                            width: MediaQuery.of(context).size.width * 0.4256,
+                            padding: EdgeInsets.all(1), // Border width
+                            decoration: ShapeDecoration(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(8))),
+                                color: specialtextcolour),
+                            child: ClipRRect(
+                              child: SizedBox.fromSize(
+                                size: Size.fromRadius(8), // Image radius
+                                child: Image.asset('assets/images/5.png',
+                                    fit: BoxFit.fitWidth),
+                              ),
                             ),
                           ),
-                        ),
+                          Center(
+                              child: Text(
+                            "Cooked Up",
+                            style: TextStyle(color: Color(0xff630202)),
+                          )),
+                        ]),
                       ],
                     ),
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.0343,
                   ),
-                  Text(
-                    "What would you like to do",
-                    style: TextStyle(
-                        fontSize: MediaQuery.of(context).size.height * 0.019,
-                        color: darktextcolour),
+                  Row(
+                    children: [
+                      Expanded(child: SizedBox(), flex: 1),
+                      Text(
+                        "What would you like to do",
+                        style: TextStyle(
+                            fontSize:
+                                MediaQuery.of(context).size.height * 0.019,
+                            fontFamily: 'Roboto',
+                            fontWeight: FontWeight.bold,
+                            color: darktextcolour),
+                      ),
+                      Expanded(child: SizedBox(), flex: 20),
+                    ],
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.0142,
                   ),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.188,
-                    decoration: ShapeDecoration(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(8))),
-                        color: boxcolour),
+                  Row(
+                    children: [
+                      Container(
+                        height: MediaQuery.of(context).size.height * 0.188,
+                        width: MediaQuery.of(context).size.width * 0.407,
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10),
+                        decoration: ShapeDecoration(
+                            shape: RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(8))),
+                            color: boxcolour),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(Icons.support_agent,
+                                color: darktextcolour, size: 50),
+                            Text("Customer Care",
+                                style: TextStyle(
+                                    color: darktextcolour,
+                                    fontFamily: 'Roboto',
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16)),
+                            Text(
+                                "Our customer care service line is available from 8 -9pm week days and 9 - 5 weekends - tap to call us today",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 9)),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.188,
+                        width: MediaQuery.of(context).size.width * 0.05,
+                      ),
+                      Container(
+                        height: MediaQuery.of(context).size.height * 0.188,
+                        width: MediaQuery.of(context).size.width * 0.407,
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10),
+                        decoration: ShapeDecoration(
+                            shape: RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(8))),
+                            color: boxcolour),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(CupertinoIcons.cube_box,
+                                color: darktextcolour, size: 50),
+                            Text("Send a Package",
+                                style: TextStyle(
+                                    color: darktextcolour,
+                                    fontFamily: 'Roboto',
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16)),
+                            Text(
+                                "Request for a driver to pick up or deliver your package for you",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 9)),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.0284,
                   ),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.188,
-                    decoration: ShapeDecoration(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(8))),
-                        color: boxcolour),
+                  Row(
+                    children: [
+                      Container(
+                        height: MediaQuery.of(context).size.height * 0.188,
+                        width: MediaQuery.of(context).size.width * 0.407,
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10),
+                        decoration: ShapeDecoration(
+                            shape: RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(8))),
+                            color: boxcolour),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(Icons.wallet, color: darktextcolour, size: 50),
+                            Text("Fund your wallet",
+                                style: TextStyle(
+                                    color: darktextcolour,
+                                    fontFamily: 'Roboto',
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16)),
+                            Text(
+                                "To fund your wallet is as easy as ABC, make use of our fast technology and top-up your wallet today",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 9)),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.188,
+                        width: MediaQuery.of(context).size.width * 0.05,
+                      ),
+                      Container(
+                        height: MediaQuery.of(context).size.height * 0.188,
+                        width: MediaQuery.of(context).size.width * 0.407,
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10),
+                        decoration: ShapeDecoration(
+                            shape: RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(8))),
+                            color: darktextcolour),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(Icons.directions_car,
+                                color: Colors.white, size: 50),
+                            Text("Book a rider",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16)),
+                            Text("Search for available rider within your area",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 9)),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.0284,
                   ),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.188,
-                    decoration: ShapeDecoration(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(8))),
-                        color: boxcolour),
+                  Row(
+                    children: [
+                      Container(
+                        height: MediaQuery.of(context).size.height * 0.188,
+                        width: MediaQuery.of(context).size.width * 0.407,
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10),
+                        decoration: ShapeDecoration(
+                            shape: RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(8))),
+                            color: boxcolour),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(Icons.add, color: darktextcolour, size: 45),
+                            Text("Enroll as a rider",
+                                style: TextStyle(
+                                    color: darktextcolour,
+                                    fontFamily: 'Roboto',
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16)),
+                            Text(
+                                "A chance for you to earn as you become one of our delivery agents, enroll and get the necessary trainings from our crew to get started.",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 9)),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.188,
+                        width: MediaQuery.of(context).size.width * 0.05,
+                      ),
+                      Container(
+                        height: MediaQuery.of(context).size.height * 0.188,
+                        width: MediaQuery.of(context).size.width * 0.407,
+                        padding: EdgeInsets.only(left: 10, top: 10, right: 10),
+                        decoration: ShapeDecoration(
+                            shape: RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(8))),
+                            color: boxcolour),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(Icons.money, color: darktextcolour, size: 50),
+                            Text("Refer and Earn",
+                                style: TextStyle(
+                                    color: darktextcolour,
+                                    fontFamily: 'Roboto',
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16)),
+                            Text(
+                                "Refer a friend to our platform and stand the chance of winning lots of goodies plus free delivery",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 9)),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.11,
