@@ -1,6 +1,8 @@
 import 'package:app/pages/home.dart';
 import 'package:flutter/material.dart';
 
+import 'navigation.dart';
+
 void main(){
   runApp(const myapp());
 }
@@ -15,9 +17,13 @@ class myapp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: "/",
       routes: {
-        "/":(context)=> homepage(),
+        "/":(context)=> app(),
       },
     );
   }
 }
+
+
+
+
 
