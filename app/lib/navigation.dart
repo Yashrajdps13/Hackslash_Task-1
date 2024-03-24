@@ -1,4 +1,7 @@
 import 'package:app/pages/home.dart';
+import 'package:app/pages/profile.dart';
+import 'package:app/pages/tracking.dart';
+import 'package:app/pages/wallet.dart';
 import 'package:flutter/material.dart';
 
 class app extends StatefulWidget {
@@ -11,13 +14,22 @@ class app extends StatefulWidget {
 
 class _appState extends State<app> {
 int myindex = 0;
+ static const List<Widget> widgetList = [
+  homepage(),
+  walletpage(),
+  tracking(),
+  profile(),
+];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     appBar: AppBar(
-       title:Text("Bottom"),
-     ),
+
+      body: (
+      Container(
+        child: widgetList[myindex],
+      )
+      ),
 
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
