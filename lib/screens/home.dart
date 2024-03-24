@@ -36,7 +36,7 @@ class _HomeState extends State<Home> {
                         color: boxcolour),
                     height: MediaQuery.of(context).size.height * 0.04,
                     width: MediaQuery.of(context).size.width * 0.875,
-                    child: TextField(
+                    child: TextFormField(
                       cursorColor: Colors.white,
                       style: TextStyle(fontSize: 13, color: Colors.white),
                       decoration: InputDecoration(
@@ -51,7 +51,7 @@ class _HomeState extends State<Home> {
                               borderSide: BorderSide(
                                 color: boxcolour,
                               )),
-                          hintText: "Search",
+                          hintText: "Search services",
                           hintStyle:
                               TextStyle(fontSize: 13, color: searchcolour)),
                     ),
@@ -61,29 +61,172 @@ class _HomeState extends State<Home> {
                   ),
                   Container(
                     height: MediaQuery.of(context).size.height * 0.1,
+                    width: MediaQuery.of(context).size.width * 0.875,
                     decoration: ShapeDecoration(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.all(Radius.circular(8))),
                         color: boxcolour),
+                    child: Row(
+                      children: [
+                        Expanded(child: SizedBox(), flex: 1),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Hello Ken",
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    fontFamily: 'Roboto',
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white)),
+                            Text("We trust you are having a great time",
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    fontFamily: 'Roboto',
+                                    color: Colors.white))
+                          ],
+                        ),
+                        Expanded(child: SizedBox(), flex: 5),
+                        Icon(Icons.notifications,
+                            color: Colors.white, size: 25),
+                        Expanded(child: SizedBox(), flex: 1),
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.046,
                   ),
-                  Text(
-                    "Special for you",
-                    style: TextStyle(
-                        fontSize: MediaQuery.of(context).size.height * 0.019,
-                        color: specialtextcolour),
+                  Row(
+                    children: [
+                      Expanded(child: SizedBox(), flex: 1),
+                      Text(
+                        "Special for you",
+                        style: TextStyle(
+                            fontSize:
+                                MediaQuery.of(context).size.height * 0.019,
+                            fontFamily: 'Roboto',
+                            fontWeight: FontWeight.bold,
+                            color: specialtextcolour),
+                      ),
+                      Expanded(child: SizedBox(), flex: 20),
+                      Icon(Icons.arrow_circle_right_outlined,
+                          color: specialtextcolour, size: 15),
+                    ],
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.00829,
                   ),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.0758,
-                    decoration: ShapeDecoration(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(8))),
-                        color: boxcolour),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Container(
+                          height: MediaQuery.of(context).size.height * 0.0758,
+                          width: MediaQuery.of(context).size.width * 0.4256,
+                          padding: EdgeInsets.all(1), // Border width
+                          decoration: ShapeDecoration(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(8))),
+                              color: specialtextcolour),
+                          child: ClipRRect(
+                            child: SizedBox.fromSize(
+                              size: Size.fromRadius(8), // Image radius
+                              child: Image.asset('assets/images/techmeetup.png',
+                                  fit: BoxFit.fitWidth),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.0758,
+                          width: MediaQuery.of(context).size.width * 0.03,
+                        ),
+                        Container(
+                          height: MediaQuery.of(context).size.height * 0.0758,
+                          width: MediaQuery.of(context).size.width * 0.4256,
+                          padding: EdgeInsets.all(1), // Border width
+                          decoration: ShapeDecoration(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(8))),
+                              color: specialtextcolour),
+                          child: ClipRRect(
+                            child: SizedBox.fromSize(
+                              size: Size.fromRadius(8), // Image radius
+                              child: Image.asset(
+                                  'assets/images/loverevolution.png',
+                                  fit: BoxFit.fitWidth),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.0758,
+                          width: MediaQuery.of(context).size.width * 0.03,
+                        ),
+                        Container(
+                          height: MediaQuery.of(context).size.height * 0.0758,
+                          width: MediaQuery.of(context).size.width * 0.4256,
+                          padding: EdgeInsets.all(1), // Border width
+                          decoration: ShapeDecoration(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(8))),
+                              color: specialtextcolour),
+                          child: ClipRRect(
+                            child: SizedBox.fromSize(
+                              size: Size.fromRadius(8), // Image radius
+                              child: Image.asset(
+                                  'assets/images/3.png',
+                                  fit: BoxFit.fitWidth),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.0758,
+                          width: MediaQuery.of(context).size.width * 0.03,
+                        ),
+                        Container(
+                          height: MediaQuery.of(context).size.height * 0.0758,
+                          width: MediaQuery.of(context).size.width * 0.4256,
+                          padding: EdgeInsets.all(1), // Border width
+                          decoration: ShapeDecoration(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(8))),
+                              color: specialtextcolour),
+                          child: ClipRRect(
+                            child: SizedBox.fromSize(
+                              size: Size.fromRadius(8), // Image radius
+                              child: Image.asset(
+                                  'assets/images/4.png',
+                                  fit: BoxFit.fitWidth),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.0758,
+                          width: MediaQuery.of(context).size.width * 0.03,
+                        ),
+                        Container(
+                          height: MediaQuery.of(context).size.height * 0.0758,
+                          width: MediaQuery.of(context).size.width * 0.4256,
+                          padding: EdgeInsets.all(1), // Border width
+                          decoration: ShapeDecoration(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(8))),
+                              color: specialtextcolour),
+                          child: ClipRRect(
+                            child: SizedBox.fromSize(
+                              size: Size.fromRadius(8), // Image radius
+                              child: Image.asset(
+                                  'assets/images/5.png',
+                                  fit: BoxFit.fitWidth),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.0343,
