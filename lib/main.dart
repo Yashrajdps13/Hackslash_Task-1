@@ -1,5 +1,7 @@
-import 'package:task1/screens/home.dart';
-import "package:task1/screens/profile.dart";
+import 'package:task1/screens/1home.dart';
+import 'package:task1/screens/2wallet.dart';
+import 'package:task1/screens/3track.dart';
+import 'package:task1/screens/4profile.dart';
 import 'package:flutter/material.dart';
 import 'package:task1/utils/routes.dart';
 
@@ -20,6 +22,9 @@ class MyApp extends StatelessWidget {
         routes: {
           "/": (context) => const Home(),
           MyRoutes.profileRoute: (context) => const Profile(),
+          MyRoutes.walletRoute: (context) => const Wallet(),
+          MyRoutes.homeRoute: (context) => const Home(),
+          MyRoutes.trackRoute: (context) => const Track(),
         }
     );
   }
