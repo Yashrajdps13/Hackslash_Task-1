@@ -57,7 +57,7 @@ class _WalletState extends State<Wallet> {
                             width: 30,
                           ),
                           SizedBox(
-                            height: 5,
+                            height: 8,
                             width: 30,
                           ),
                           Icon(Icons.wallet, color: darktextcolour),

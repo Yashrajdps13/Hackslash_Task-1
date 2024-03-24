@@ -487,7 +487,7 @@ class _HomeState extends State<Home> {
                               width: 30,
                             ),
                             SizedBox(
-                              height: 5,
+                              height: 8,
                               width: 30,
                             ),
                             Icon(Icons.home, color: darktextcolour),

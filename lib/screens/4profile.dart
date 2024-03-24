@@ -27,11 +27,11 @@ class _ProfileState extends State<Profile> {
         padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 24.0),
         child: Column(
           children: [
-            SizedBox(height: 10),
+            SizedBox(height: 20),
             Row(
               children: [
                 CircleAvatar(
-                  radius: 30,
+                  radius: 35,
                   backgroundColor: Colors.white70,
                   backgroundImage: AssetImage('assets/images/profilepic.png'),
                 ),
@@ -77,7 +77,7 @@ class _ProfileState extends State<Profile> {
               ],
             ),
             SizedBox(
-              height: 20,
+              height: 25,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -99,14 +99,14 @@ class _ProfileState extends State<Profile> {
               ],
             ),
             SizedBox(
-              height: 13,
+              height: 18,
             ),
             Container(
               color: boxcolour,
               height: MediaQuery.of(context).size.height * 0.07,
               padding: EdgeInsets.only(top: 8, left: 10, right: 10),
               alignment: Alignment.center,
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+              margin: EdgeInsets.symmetric(vertical: 5, horizontal: 0),
               child: Row(
                 children: [
                   Icon(
@@ -151,6 +151,7 @@ class _ProfileState extends State<Profile> {
               height: MediaQuery.of(context).size.height * 0.07,
               padding: EdgeInsets.only(top: 8, left: 10, right: 10),
               alignment: Alignment.center,
+              margin: EdgeInsets.symmetric(vertical: 5, horizontal: 0),
               child: Row(
                 children: [
                   Icon(
@@ -194,7 +195,7 @@ class _ProfileState extends State<Profile> {
               height: MediaQuery.of(context).size.height * 0.07,
               padding: EdgeInsets.only(top: 8, left: 10, right: 10),
               alignment: Alignment.center,
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+              margin: EdgeInsets.symmetric(vertical: 5, horizontal: 0),
               child: Row(
                 children: [
                   Icon(
@@ -239,7 +240,7 @@ class _ProfileState extends State<Profile> {
               height: MediaQuery.of(context).size.height * 0.07,
               padding: EdgeInsets.only(top: 8, left: 10, right: 10),
               alignment: Alignment.center,
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+              margin: EdgeInsets.symmetric(vertical: 5, horizontal: 0),
               child: Row(
                 children: [
                   Icon(
@@ -284,7 +285,7 @@ class _ProfileState extends State<Profile> {
               height: MediaQuery.of(context).size.height * 0.07,
               padding: EdgeInsets.only(top: 8, left: 10, right: 10),
               alignment: Alignment.center,
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+              margin: EdgeInsets.symmetric(vertical: 5, horizontal: 0),
               child: Row(
                 children: [
                   Icon(
@@ -327,7 +328,7 @@ class _ProfileState extends State<Profile> {
               height: MediaQuery.of(context).size.height * 0.07,
               padding: EdgeInsets.only(top: 8, left: 10, right: 10),
               alignment: Alignment.center,
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+              margin: EdgeInsets.symmetric(vertical: 5, horizontal: 0),
               child: Row(
                 children: [
                   Icon(
@@ -372,7 +373,7 @@ class _ProfileState extends State<Profile> {
               height: MediaQuery.of(context).size.height * 0.07,
               padding: EdgeInsets.only(top: 8, left: 10, right: 10),
               alignment: Alignment.center,
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+              margin: EdgeInsets.symmetric(vertical: 5, horizontal: 0),
               child: Row(
                 children: [
                   Icon(
@@ -438,7 +439,7 @@ class _ProfileState extends State<Profile> {
                       child: Container(
                         child: Column(children: [
                           SizedBox(
-                            height: 5,
+                            height: 11,
                             width: 30,
                           ),
                           Icon(Icons.wallet, color: Colors.white),
@@ -479,7 +480,7 @@ class _ProfileState extends State<Profile> {
                             width: 30,
                           ),
                           SizedBox(
-                            height: 5,
+                            height: 8,
                             width: 30,
                           ),
                           Icon(Icons.person_rounded, color: darktextcolour),
