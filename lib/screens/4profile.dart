@@ -27,10 +27,11 @@ class _ProfileState extends State<Profile> {
         padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 24.0),
         child: Column(
           children: [
+            SizedBox(height: 10),
             Row(
               children: [
                 CircleAvatar(
-                  radius: 48,
+                  radius: 30,
                   backgroundColor: Colors.white70,
                   backgroundImage: AssetImage('assets/images/profilepic.png'),
                 ),
@@ -84,7 +85,7 @@ class _ProfileState extends State<Profile> {
                 Text(
                   "Enable Dark Mode",
                   style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Roboto',
                       color: Colors.white),
@@ -98,7 +99,304 @@ class _ProfileState extends State<Profile> {
               ],
             ),
             SizedBox(
-              height: 40,
+              height: 13,
+            ),
+            Container(
+              color: boxcolour,
+              height: MediaQuery.of(context).size.height * 0.07,
+              padding: EdgeInsets.only(top: 8, left: 10, right: 10),
+              alignment: Alignment.center,
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.person,
+                    color: Colors.white,
+                    size: 30,
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Edit Profile",
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                      Flexible(
+                        child: Text(
+                          "Name, phone no, address, email...",
+                          maxLines: 1,
+                          style:
+                              TextStyle(color: Color(0xffA7A7A7), fontSize: 11),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Spacer(),
+                  Icon(
+                    Icons.navigate_next,
+                    color: Colors.white,
+                  )
+                ],
+              ),
+            ),
+            Container(
+              color: boxcolour,
+              height: MediaQuery.of(context).size.height * 0.07,
+              padding: EdgeInsets.only(top: 8, left: 10, right: 10),
+              alignment: Alignment.center,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.text_snippet,
+                    color: Colors.white,
+                    size: 30,
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Statements & Reports",
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                      Flexible(
+                        child: Text(
+                          "Download transaction details, orders, deliveries",
+                          style:
+                              TextStyle(color: Color(0xffA7A7A7), fontSize: 11),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Spacer(),
+                  Icon(
+                    Icons.navigate_next,
+                    color: Colors.white,
+                  )
+                ],
+              ),
+            ),
+            Container(
+              color: boxcolour,
+              height: MediaQuery.of(context).size.height * 0.07,
+              padding: EdgeInsets.only(top: 8, left: 10, right: 10),
+              alignment: Alignment.center,
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.notifications,
+                    color: Colors.white,
+                    size: 30,
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Notification Settings",
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                      Flexible(
+                        child: Text(
+                          "Mute, Unmute, Set Location ",
+                          maxLines: 1,
+                          style:
+                              TextStyle(color: Color(0xffA7A7A7), fontSize: 11),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Spacer(),
+                  Icon(
+                    Icons.navigate_next,
+                    color: Colors.white,
+                  )
+                ],
+              ),
+            ),
+            Container(
+              color: boxcolour,
+              height: MediaQuery.of(context).size.height * 0.07,
+              padding: EdgeInsets.only(top: 8, left: 10, right: 10),
+              alignment: Alignment.center,
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.credit_card,
+                    color: Colors.white,
+                    size: 30,
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Card & Bank account settings",
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                      Flexible(
+                        child: Text(
+                          "Change Cards, Delete Card Details",
+                          maxLines: 1,
+                          style:
+                              TextStyle(color: Color(0xffA7A7A7), fontSize: 11),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Spacer(),
+                  Icon(
+                    Icons.navigate_next,
+                    color: Colors.white,
+                  )
+                ],
+              ),
+            ),
+            Container(
+              color: boxcolour,
+              height: MediaQuery.of(context).size.height * 0.07,
+              padding: EdgeInsets.only(top: 8, left: 10, right: 10),
+              alignment: Alignment.center,
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.share,
+                    color: Colors.white,
+                    size: 30,
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Referrals",
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                      Flexible(
+                        child: Text("check no of friends and earn",
+                            maxLines: 1,
+                            style: TextStyle(
+                                color: Color(0xffA7A7A7), fontSize: 11)),
+                      ),
+                    ],
+                  ),
+                  Spacer(),
+                  Icon(
+                    Icons.navigate_next,
+                    color: Colors.white,
+                  )
+                ],
+              ),
+            ),
+            Container(
+              color: boxcolour,
+              height: MediaQuery.of(context).size.height * 0.07,
+              padding: EdgeInsets.only(top: 8, left: 10, right: 10),
+              alignment: Alignment.center,
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.image,
+                    color: Colors.white,
+                    size: 30,
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "About Us",
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                      Flexible(
+                        child: Text(
+                          "know more about us, terms and conditions ",
+                          maxLines: 1,
+                          style:
+                              TextStyle(color: Color(0xffA7A7A7), fontSize: 11),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Spacer(),
+                  Icon(
+                    Icons.navigate_next,
+                    color: Colors.white,
+                  )
+                ],
+              ),
+            ),
+            Container(
+              color: boxcolour,
+              height: MediaQuery.of(context).size.height * 0.07,
+              padding: EdgeInsets.only(top: 8, left: 10, right: 10),
+              alignment: Alignment.center,
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.logout,
+                    color: Color(0xffED3A3A),
+                    size: 35,
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Text(
+                    "Logout",
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
+                  Spacer(),
+                  Icon(
+                    Icons.navigate_next,
+                    color: Colors.white,
+                  )
+                ],
+              ),
             ),
           ],
         ),
