@@ -13,8 +13,96 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        iconTheme:
+            IconThemeData(color: Color(0xffA7A7A7) //change your color here
+                ),
+        title: Text("Profile",
+            style: TextStyle(fontSize: 16, color: Color(0xffA7A7A7))),
+        centerTitle: true,
+        backgroundColor: boxcolour,
+      ),
       backgroundColor: darkbackgroundcolor,
-      body: SingleChildScrollView(),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 24.0),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                CircleAvatar(
+                  radius: 48,
+                  backgroundColor: Colors.white70,
+                  backgroundImage: AssetImage('assets/images/profilepic.png'),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Ken Nwaeze",
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "Current balance: ",
+                          style: TextStyle(
+                              fontSize: 12,
+                              color: Colors.white,
+                              fontFamily: 'Roboto'),
+                        ),
+                        Text(
+                          "N10,712.00",
+                          style: TextStyle(
+                              fontSize: 12,
+                              color: darktextcolour,
+                              fontFamily: 'Roboto'),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+                Spacer(),
+                Icon(
+                  Icons.visibility_off,
+                  color: Colors.white,
+                )
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  "Enable Dark Mode",
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Roboto',
+                      color: Colors.white),
+                ),
+                Spacer(),
+                Icon(
+                  Icons.radio_button_on,
+                  color: Colors.white,
+                  size: 25,
+                )
+              ],
+            ),
+            SizedBox(
+              height: 40,
+            ),
+          ],
+        ),
+      ),
       bottomNavigationBar: Container(
         color: darkbackgroundcolor,
         child: BottomAppBar(
