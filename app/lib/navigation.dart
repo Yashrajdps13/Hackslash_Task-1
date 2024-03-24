@@ -58,7 +58,7 @@ int myindex = 0;
             label: "Track",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_pin),
+            icon: Icon(Icons.account_circle_outlined),
             label: "Profile",
           ),
         ],
