@@ -487,7 +487,7 @@ class _HomeState extends State<Home> {
                               width: 30,
                             ),
                             SizedBox(
-                              height: 8,
+                              height: 5,
                               width: 30,
                             ),
                             Icon(Icons.home, color: darktextcolour),
@@ -540,7 +540,7 @@ class _HomeState extends State<Home> {
                       Expanded(child: SizedBox(), flex: 1),
                       InkWell(
                         onTap: () => (Navigator.of(context)
-                            .pushNamed(MyRoutes.walletRoute)),
+                            .pushNamed(MyRoutes.profileRoute)),
                         child: Container(
                           child: Column(children: [
                             SizedBox(
