@@ -1,13 +1,27 @@
 import 'package:flutter/material.dart';
 
-class tracking extends StatelessWidget {
+class tracking extends StatefulWidget {
   const tracking({super.key});
 
   @override
+  State<tracking> createState() => _trackingState();
+}
+
+class _trackingState extends State<tracking> {
+  @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body:Center(
-        child: Text("tracking"),
+        child: Container(
+          child: Column(
+            children: [
+              Container(
+
+              )
+            ],
+          ),
+        ),
+
       ),
     );
   }

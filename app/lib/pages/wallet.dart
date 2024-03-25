@@ -19,14 +19,16 @@ class _walletpageState extends State<walletpage> {
           padding: EdgeInsets.symmetric(horizontal: 20,vertical: 40),
 
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
-                alignment: Alignment.center,
                 child: Row(
                   children: [
                      Icon(Icons.arrow_back,color: Colors.white,),
+                    Spacer(),
                     Text("Wallet",style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold, fontSize: 20, ),),
+                    Spacer(),
                   ],
                 ),
               ),
@@ -35,6 +37,7 @@ class _walletpageState extends State<walletpage> {
                 child: Row(
                   children: [
                     CircleAvatar(
+
                       radius: 30,
                       backgroundImage:AssetImage ("assets/images/nigga.png"),
                     ),
@@ -72,32 +75,64 @@ class _walletpageState extends State<walletpage> {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Column(
-                            children: [
-                              CircleAvatar(
 
-                                backgroundImage: AssetImage("assets/images/bank.png",),
-                                radius: 30,
-                                backgroundColor: Color(0xff0560FA),
+                            children: [
+
+                              ClipOval(
+                                child: Container(
+                                  width: 60,
+                                  height: 60,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xff0560FA),
+                                    shape: BoxShape.circle,
+                                    image: DecorationImage(
+                                      image: AssetImage('assets/images/bank.png'),
+                                      scale: 0.6,
+                                    ),
+                                  ),
+                                ),
                               ),
                               Text("Bank",style: TextStyle(color: Colors.white,),),
                             ],
                           ),
                           Column(
+
                             children: [
-                              CircleAvatar(
-                                backgroundImage: AssetImage("assets/images/transfer.png"),
-                                radius: 30,
-                                backgroundColor: Color(0xff0560FA),
+
+                              ClipOval(
+                                child: Container(
+                                  width: 60,
+                                  height: 60,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xff0560FA),
+                                    shape: BoxShape.circle,
+                                    image: DecorationImage(
+                                      image: AssetImage('assets/images/transfer.png'),
+                                      scale: 0.6,
+                                    ),
+                                  ),
+                                ),
                               ),
                               Text("Transfer",style: TextStyle(color: Colors.white,),),
                             ],
                           ),
                           Column(
+
                             children: [
-                              CircleAvatar(
-                                backgroundImage: AssetImage("assets/images/card.png"),
-                                radius: 30,
-                                backgroundColor: Color(0xff0560FA),
+
+                              ClipOval(
+                                child: Container(
+                                  width: 60,
+                                  height: 60,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xff0560FA),
+                                    shape: BoxShape.circle,
+                                    image: DecorationImage(
+                                      image: AssetImage('assets/images/card.png'),
+                                      scale: 0.6,
+                                    ),
+                                  ),
+                                ),
                               ),
                               Text("Card",style: TextStyle(color: Colors.white,),),
                             ],
