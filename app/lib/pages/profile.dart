@@ -103,7 +103,7 @@ class _profileState extends State<profile> {
             ],
           ),
         ),
-      )
+      ),
     );
   }
 }
