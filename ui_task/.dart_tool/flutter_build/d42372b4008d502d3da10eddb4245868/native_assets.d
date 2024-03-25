@@ -1,0 +1,1 @@
+ C:\\my_code_stuffs\\Hackslash_Task-1\\ui_task\\.dart_tool\\flutter_build\\d42372b4008d502d3da10eddb4245868\\native_assets.yaml: 
