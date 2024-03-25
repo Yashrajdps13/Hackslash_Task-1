@@ -30,8 +30,8 @@ class _appState extends State<app> {
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: darkbackgroundcolor,
         type: BottomNavigationBarType.fixed,
-        unselectedItemColor: Colors.grey,
-        selectedItemColor: Colors.blue,
+        unselectedItemColor: Colors.white,
+        selectedItemColor: darktextcolour,
         onTap: (index) {
           setState(() {
             myindex = index;

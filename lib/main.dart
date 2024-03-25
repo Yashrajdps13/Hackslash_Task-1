@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:task1/navigationbar.dart';
+import 'package:task1/screens/1home.dart';
+import 'package:task1/utils/routes.dart';
 
-
-void main(){
+void main() {
   runApp(const myapp());
 }
 
@@ -12,11 +13,12 @@ class myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "task-1",
+      title: "Hackslash cloning app",
       debugShowCheckedModeBanner: false,
       initialRoute: "/",
       routes: {
-        "/":(context)=> app(),
+        "/": (context) => app(),
+        MyRoutes.homeRoute: (context) => Home(),
       },
     );
   }
