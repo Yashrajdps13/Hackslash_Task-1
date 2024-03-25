@@ -10,40 +10,71 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
       
 
-
-       bottomNavigationBar: BottomAppBar(
-        height: 60,
+  bottomNavigationBar: BottomAppBar(
+        height: 100,
         color: darkbackgroundColor,
-        elevation: 0.5,
+        elevation: 0,
         child: Row(
           children: [
-            IconButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, MyRoutes.HomePageRouter);
-                },
-                icon: Icon(Icons.home),
-                color: Color.fromARGB(255, 225, 220, 220)),
+            Container(
+                padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                child: Column(children: [
+                  IconButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, MyRoutes.HomePageRouter);
+                      },
+                      icon: Icon(Icons.home),
+                      color: Color.fromARGB(255, 225, 220, 220)),
+                  Text(
+                    "Home",
+                    style: TextStyle(fontSize: 13, color: Colors.white),
+                  )
+                ])),
             Spacer(),
-            IconButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, MyRoutes.WalletPageRouter);
-                },
-                icon: Icon(Icons.wallet_giftcard_outlined),
-                color: Color.fromARGB(255, 225, 220, 220)),
+            Container(
+                padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                child: Column(children: [
+                  IconButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, MyRoutes.WalletPageRouter);
+                      },
+                      icon: Icon(Icons.wallet),
+                      color: Color.fromARGB(255, 225, 220, 220)),
+                  Text(
+                    "Wallet",
+                    style: TextStyle(fontSize: 13, color: Colors.white),
+                  )
+                ])),
             Spacer(),
-            IconButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, MyRoutes.TrackPageRouter);
-                },
-                icon: Icon(Icons.art_track_outlined),
-                color: Color.fromARGB(255, 225, 220, 220)),
+           Container(
+                padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                child: Column(children: [
+                  IconButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, MyRoutes.TrackPageRouter);
+                      },
+                      icon: Icon(Icons.track_changes_outlined),
+                      color: Color.fromARGB(255, 225, 220, 220)),
+                  Text(
+                    "Track",
+                    style: TextStyle(fontSize: 13, color: Colors.white),
+                  )
+                ])),
             Spacer(),
-            IconButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, MyRoutes.ProfilePageRouter);
-                },
-                icon: Icon(Icons.person_4_outlined),
-                color: Color.fromARGB(255, 225, 220, 220)),
+           Container(
+                padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                child: Column(children: [
+                  IconButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, MyRoutes.ProfilePageRouter);
+                      },
+                      icon: Icon(Icons.person),
+                      color: Color.fromARGB(255, 225, 220, 220)),
+                  Text(
+                    "Profile",
+                    style: TextStyle(fontSize: 13, color: Colors.white),
+                  )
+                ])),
           ],
         ),
       ),
