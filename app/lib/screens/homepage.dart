@@ -171,7 +171,7 @@ class Homepage extends StatelessWidget {
                   children:[
                     SizedBox(height: 10,),
                     Padding(padding:EdgeInsets.only(left: 10)),
-                    Icon(Icons.help_center,color:Colors.lightBlue,size: 30,),
+                    Icon(Icons.headset_mic,color:Colors.lightBlue,size: 30,),
                     SizedBox(height: 5,),
                     Text("Customer Care",style: TextStyle(color: Colors.lightBlue,fontSize: 20),),
                     SizedBox(height: 5,),
@@ -215,7 +215,7 @@ class Homepage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20,),
-          Container(
+           Container(
             child: Row(
               children: [
                Container(
@@ -273,7 +273,7 @@ class Homepage extends StatelessWidget {
                   ],
                   
                 ),
-               )
+               ),
               ],
             ),
           ),
@@ -287,7 +287,7 @@ class Homepage extends StatelessWidget {
 
 
      ),),
-     bottomNavigationBar: Container(
+    bottomNavigationBar: Container(
       color:secondcolor,
       height: 65,
       child: Row(
@@ -299,7 +299,7 @@ class Homepage extends StatelessWidget {
           
           children: [
               
-           
+            
             Icon(Icons.home,color:Colors.lightBlue,size: 30,),
             Text("Home",style: TextStyle(color: Colors.white),)
           ],
@@ -311,13 +311,20 @@ class Homepage extends StatelessWidget {
             Text("Wallet",style: TextStyle(color: Colors.white),)
           ],
         ),
-        Column(
-          children: [
-             
-            Icon(Icons.track_changes,color:Colors.white,size: 30,),
-            Text("Track",style: TextStyle(color: Colors.white),)
-          ],
-        ),
+        InkWell(
+              onTap: ()=>{
+                   Navigator.of(context).pushNamed(MyRoutes.TrackRoute),
+              },
+                child: Container(
+                  child: Column(
+                    children: [ 
+                      Icon(Icons.track_changes,color:Colors.white,size: 30,),
+            Text("Track",style: TextStyle(color: Colors.white),), 
+            ],
+                  ),
+                ),
+              ),
+        
         
               InkWell(
               onTap: ()=>{
@@ -332,19 +339,9 @@ class Homepage extends StatelessWidget {
                   ),
                 ),
               ),
-            
-            
-            
-           
-          
-        
-        
-        
-        
-
       ],
      ),
-     )
+     ),
      
 
      

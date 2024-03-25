@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: "/",
       routes:{
-        "/":(context)=> Profile(),
+        "/":(context)=> Wallet(),
         MyRoutes.WalletRoute:(context) => Wallet(),
         MyRoutes.TrackRoute:(context) =>Track(),
         MyRoutes.ProfileRoute:(context) => Profile(),

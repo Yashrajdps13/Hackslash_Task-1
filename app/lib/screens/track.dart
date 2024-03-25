@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:app/material.dart/routes.dart';
+import 'package:app/material.dart/global.dart';
+
 
 class Track extends StatefulWidget {
   const Track({super.key});
@@ -10,6 +13,208 @@ class Track extends StatefulWidget {
 class _TrackState extends State<Track> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+       body: 
+      SingleChildScrollView(
+        child: Container(
+          color: Maincolor,
+          child: Column(
+            
+            children: [
+           
+            Image(image: AssetImage("assets/images/Map.png"),height: 350,  fit: BoxFit.cover,),
+            SizedBox(height: 25,),
+            Container(
+              
+              padding: EdgeInsets.symmetric(horizontal: 30),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Row(
+                    children: [
+                      Text("Tracking Number",style: TextStyle(color: Colors.white,fontSize: 19),)
+                    ],
+                  ),
+                  SizedBox(height: 20,),
+                  Row(
+                    children: [
+                      Icon(Icons.ac_unit,color: Colors.blue,),
+                      SizedBox(width: 10,),
+                      Text("R-7458-4567-4434-5854",style: TextStyle(color: Colors.blue,fontSize: 18),)
+                    ],
+                  ),
+                  SizedBox(height: 14,),
+                  Row(
+                    children: [
+                      Text("Package Status",style: TextStyle(color: Colors.grey,fontSize: 15),)
+                    ],
+                  ),
+                  SizedBox(height: 20,),
+                  Row(
+                    children: [
+                      Icon(Icons.check_box,color: Colors.blue,),
+                      SizedBox(width: 4,),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(height: 10,),
+                          Text("Courier requested",style: TextStyle(color: Colors.grey,fontSize: 17),),
+                          SizedBox(height: 2,),
+                          Text("july 7 2022 08:00am",style: TextStyle(color: Colors.orange),)
+                        ],
+                      )
+                    ],
+                  ),
+                  SizedBox(height: 10,),
+                   Row(
+                    children: [
+                      Icon(Icons.check_box,color: Colors.blue,),
+                      SizedBox(width: 4,),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(height: 10,),
+                          Text("Package ready for delivery",style: TextStyle(color: Colors.grey,fontSize: 17),),
+                          SizedBox(height: 2,),
+                          Text("july 7 2022 08:30am",style: TextStyle(color: Colors.orange),)
+                        ],
+                      )
+                    ],
+                  ),
+                   SizedBox(height: 10,),
+                   Row(
+                    children: [
+                      Icon(Icons.check_box_outline_blank,color: Colors.blue,),
+                      SizedBox(width: 4,),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(height: 10,),
+                          Text("Package in transit",style: TextStyle(color: Colors.grey,fontSize: 17),),
+                          SizedBox(height: 2,),
+                          Text("july 7 2022 10:30am",style: TextStyle(color: Colors.orange),)
+                        ],
+                      )
+                    ],
+                  ),
+                   SizedBox(height: 10,),
+                   Row(
+                    children: [
+                      Icon(Icons.check_box_outline_blank,color: Colors.blue,),
+                      SizedBox(width: 4,),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(height: 10,),
+                          Text("Package deliverd",style: TextStyle(color: Colors.grey,fontSize: 17),),
+                          SizedBox(height: 2,),
+                          Text("july 7 2022 10:30am",style: TextStyle(color: Colors.orange),)
+                        ],
+                      )
+                    ],
+                  ),
+                  SizedBox(height: 50,),
+                  Container(
+                    width: 600,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child:Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                         Text("View Package Info",style: TextStyle(color: Colors.white,fontSize: 17),),
+                      ],
+                    )
+                  ),
+                  SizedBox(height: 40,),
+
+                ],
+              ),
+            )
+             
+
+
+
+            ],
+          ),
+        ),
+
+
+),
+ bottomNavigationBar: Container(
+      color:secondcolor,
+      height: 65,
+      child: Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      
+      children: [
+        Column(
+          
+          children: [
+              
+            
+            Icon(Icons.home,color:Colors.white,size: 30,),
+            Text("Home",style: TextStyle(color: Colors.white),)
+          ],
+        ),
+        Column(
+          children: [
+           
+            Icon(Icons.wallet,color:Colors.white,size: 30,),
+            Text("Wallet",style: TextStyle(color: Colors.white),)
+          ],
+        ),
+          InkWell(
+              onTap: ()=>{
+                   Navigator.of(context).pushNamed(MyRoutes.TrackRoute),
+              },
+                child: Container(
+                  child: Column(
+                    children: [ 
+                      Icon(Icons.track_changes,color:Colors.blue,size: 30,),
+            Text("Track",style: TextStyle(color: Colors.blue),), 
+            ],
+                  ),
+                ),
+              ),
+        
+              InkWell(
+              onTap: ()=>{
+                   Navigator.of(context).pushNamed(MyRoutes.ProfileRoute),
+              },
+                child: Container(
+                  child: Column(
+                    children: [ 
+                      Icon(Icons.person,color:Colors.white,size: 30,),
+            Text("Profile",style: TextStyle(color: Colors.white),), 
+            ],
+                  ),
+                ),
+              ),
+            
+            
+            
+           
+          
+        
+        
+        
+        
+
+      ],
+     ),
+     )
+      
+      );
   }
 }

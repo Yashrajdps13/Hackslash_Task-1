@@ -1,4 +1,5 @@
 import 'package:app/material.dart/global.dart';
+import 'package:app/material.dart/routes.dart';
 import 'package:flutter/material.dart';
 
 class Profile extends StatefulWidget {
@@ -87,7 +88,7 @@ class _ProfileState extends State<Profile> {
                 height: 60,
                 child: Row(
                   children: [
-                    Icon(Icons.account_circle_rounded,color: Colors.white,size: 33,),
+                    Icon(Icons.article_outlined,color: Colors.white,size: 33,),
                     SizedBox(width: 5,),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -111,7 +112,7 @@ class _ProfileState extends State<Profile> {
                 height: 60,
                 child: Row(
                   children: [
-                    Icon(Icons.account_circle_rounded,color: Colors.white,size: 33,),
+                    Icon(Icons.notifications,color: Colors.white,size: 33,),
                     SizedBox(width: 5,),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -135,7 +136,7 @@ class _ProfileState extends State<Profile> {
                 height: 60,
                 child: Row(
                   children: [
-                    Icon(Icons.account_circle_rounded,color: Colors.white,size: 33,),
+                    Icon(Icons.credit_card,color: Colors.white,size: 33,),
                     SizedBox(width: 5,),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -159,7 +160,7 @@ class _ProfileState extends State<Profile> {
                 height: 60,
                 child: Row(
                   children: [
-                    Icon(Icons.account_circle_rounded,color: Colors.white,size: 33,),
+                    Icon(Icons.share,color: Colors.white,size: 33,),
                     SizedBox(width: 5,),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -183,7 +184,7 @@ class _ProfileState extends State<Profile> {
                 height: 60,
                 child: Row(
                   children: [
-                    Icon(Icons.account_circle_rounded,color: Colors.white,size: 33,),
+                    Icon(Icons.message,color: Colors.white,size: 33,),
                     SizedBox(width: 5,),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -207,7 +208,7 @@ class _ProfileState extends State<Profile> {
                 height: 60,
                 child: Row(
                   children: [
-                    Icon(Icons.account_circle_rounded,color: Colors.white,size: 33,),
+                    Icon(Icons.logout,color: Colors.red,size: 33,),
                     SizedBox(width: 5,),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -230,6 +231,72 @@ class _ProfileState extends State<Profile> {
           ),
         ),
       )),
+      bottomNavigationBar: Container(
+      color:secondcolor,
+      height: 65,
+      child: Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      
+      children: [
+        Column(
+          
+          children: [
+              
+            
+            Icon(Icons.home,color:Colors.white,size: 30,),
+            Text("Home",style: TextStyle(color: Colors.white),)
+          ],
+        ),
+        Column(
+          children: [
+           
+            Icon(Icons.wallet,color:Colors.white,size: 30,),
+            Text("Wallet",style: TextStyle(color: Colors.white),)
+          ],
+        ),
+         InkWell(
+              onTap: ()=>{
+                   Navigator.of(context).pushNamed(MyRoutes.TrackRoute),
+              },
+                child: Container(
+                  child: Column(
+                    children: [ 
+                      Icon(Icons.track_changes,color:Colors.white,size: 30,),
+            Text("Track",style: TextStyle(color: Colors.white),), 
+            ],
+                  ),
+                ),
+              ),
+        
+        
+              InkWell(
+              onTap: ()=>{
+                   Navigator.of(context).pushNamed(MyRoutes.ProfileRoute),
+              },
+                child: Container(
+                  child: Column(
+                    children: [ 
+                      Icon(Icons.person,color:Colors.blue,size: 30,),
+            Text("Profile",style: TextStyle(color: Colors.blue),), 
+            ],
+                  ),
+                ),
+              ),
+            
+            
+            
+           
+          
+        
+        
+        
+        
+
+      ],
+     ),
+     )
+     
      
 
     );
