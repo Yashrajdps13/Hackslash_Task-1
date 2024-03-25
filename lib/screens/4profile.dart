@@ -14,6 +14,8 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Color(0xffA7A7A7)),
+        leading: Icon(Icons.arrow_back),
         title: Text("Profile",
             style: TextStyle(fontSize: 16, color: Color(0xffA7A7A7))),
         centerTitle: true,
@@ -98,12 +100,30 @@ class _ProfileState extends State<Profile> {
             SizedBox(
               height: 18,
             ),
-            profile_tile(icon: Icons.person, boldtext: "Edit Profile", normaltext: "Name, phone no, address, email..."),
-            profile_tile(icon: Icons.text_snippet, boldtext: "Statements & Reports", normaltext: "Download transaction details, orders, deliveries"),
-            profile_tile(icon: Icons.notifications, boldtext:  "Notification Settings", normaltext: "Mute, Unmute, Set Location "),
-            profile_tile(icon: Icons.credit_card, boldtext: "Card & Bank account settings", normaltext: "Change Cards, Delete Card Details"),
-            profile_tile(icon: Icons.share, boldtext: "Referrals", normaltext: "check no of friends and earn"),
-            profile_tile(icon: Icons.image, boldtext: "About Us", normaltext: "know more about us, terms and conditions "),
+            profile_tile(
+                icon: Icons.person,
+                boldtext: "Edit Profile",
+                normaltext: "Name, phone no, address, email..."),
+            profile_tile(
+                icon: Icons.text_snippet,
+                boldtext: "Statements & Reports",
+                normaltext: "Download transaction details, orders, deliveries"),
+            profile_tile(
+                icon: Icons.notifications,
+                boldtext: "Notification Settings",
+                normaltext: "Mute, Unmute, Set Location "),
+            profile_tile(
+                icon: Icons.credit_card,
+                boldtext: "Card & Bank account settings",
+                normaltext: "Change Cards, Delete Card Details"),
+            profile_tile(
+                icon: Icons.share,
+                boldtext: "Referrals",
+                normaltext: "check no of friends and earn"),
+            profile_tile(
+                icon: Icons.image,
+                boldtext: "About Us",
+                normaltext: "know more about us, terms and conditions "),
             Container(
               color: boxcolour,
               height: MediaQuery.of(context).size.height * 0.07,
