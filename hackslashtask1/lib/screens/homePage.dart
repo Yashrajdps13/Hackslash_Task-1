@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15)),
               Container(
                 padding: EdgeInsets.only(left: 15, right: 10),
-                height: 50,
+                height: 40,
                 width: MediaQuery.of(context).size.width,
                 decoration: ShapeDecoration(
                   shape: RoundedRectangleBorder(
@@ -33,10 +33,10 @@ class HomePage extends StatelessWidget {
                 child: Row(children: [
                   Text(
                     "Search services",
-                    style: TextStyle(color: Colors.white38, fontSize: 16),
+                    style: TextStyle(color: Colors.white54, fontSize: 13),
                   ),
                   SizedBox(width: 190),
-                  Icon(Icons.search_outlined, color: Colors.white38)
+                  Icon(Icons.search_outlined, color: Colors.white54)
                 ]),
               ),
               SizedBox(height: 30),
@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
                             vertical: 15,
                           )),
                           Text(
-                            "Hello Ken",
+                            "Hello Tanya",
                             style: TextStyle(color: Colors.white, fontSize: 20),
                           ),
                           Text(
@@ -79,65 +79,123 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 30),
               Container(
                 child: Row(children: [
                   Text(
                     "Special for you",
-                    style: TextStyle(color: text2, fontSize: 15),
+                    style: TextStyle(color: text3, fontSize: 15),
                   ),
                   SizedBox(
                     width: 230,
                   ),
                   Icon(
                     Icons.more_horiz_outlined,
-                    color: text2,
+                    color: text3,
                   )
                 ]),
               ),
+              SizedBox(
+                height: 10,
+              ),
               Container(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      height: 100,
-                      width: 230,
-                      child: Image(
-                          image: AssetImage("lib/images/blackimg.webp"),
-                          fit: BoxFit.cover),
+                      height: 70,
+                      width: 160,
                       decoration: ShapeDecoration(
-                          shape: RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10)))),
-                    ),
-                    Container(
-                      padding: EdgeInsets.only(top: 30, bottom: 30, left: 10),
-                      child: Column(
+                        shape: RoundedRectangleBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10))),
+                        image: DecorationImage(
+                            image: AssetImage("lib/images/blackimg.webp"),
+                            fit: BoxFit.cover),
+                      ),
+                      child: Row(
                         children: [
-                          Text(
-                            "Tech Meetup",
-                            style: TextStyle(fontSize: 15, color: Colors.white),
-                          ),
-                          Text(
-                            "coming soon",
-                            style: TextStyle(fontSize: 15, color: Colors.white),
+                          Column(
+                            children: [
+                              Padding(
+                                  padding: EdgeInsets.only(top: 5, left: 5)),
+                              Text(
+                                "Tech Meetup",
+                                style: TextStyle(
+                                    fontSize: 13, color: Colors.white),
+                              ),
+                              Text(
+                                "coming soon",
+                                style: TextStyle(
+                                    fontSize: 13, color: Colors.white),
+                              ),
+                            ],
                           ),
                           Container(
-                            child: Row(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
-                                SizedBox(
-                                  width: 250,
-                                ),
                                 Text(
                                   "www.techmeetup",
                                   style: TextStyle(
-                                      fontSize: 11, color: Colors.white),
-                                )
+                                      fontSize: 10, color: Colors.white),
+                                ),
                               ],
                             ),
                           )
                         ],
                       ),
-                    )
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Container(
+                      height: 70,
+                      width: 160,
+                      decoration: ShapeDecoration(
+                        shape: RoundedRectangleBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10))),
+                        image: DecorationImage(
+                            image: AssetImage("lib/images/R.jpeg"),
+                            fit: BoxFit.cover),
+                      ),
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Padding(
+                                  padding: EdgeInsets.only(top: 5, left: 5)),
+                              Text(
+                                "Tech Meetup",
+                                style: TextStyle(
+                                    fontSize: 13, color: Colors.white),
+                              ),
+                              Text(
+                                "coming soon",
+                                style: TextStyle(
+                                    fontSize: 13, color: Colors.white),
+                              ),
+                            ],
+                          ),
+                          Container(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Text(
+                                  "www.techmeetup",
+                                  style: TextStyle(
+                                      fontSize: 10, color: Colors.white),
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -148,39 +206,155 @@ class HomePage extends StatelessWidget {
               Container(
                 child: Row(
                   children: [
-                    Card(
-                      color: darkbackgroundColor2,
-                    )
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      height: 150,
+                      width: 160,
+                      decoration: ShapeDecoration(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)),
+                          color: darkbackgroundColor2),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(
+                            Icons.headphones,
+                            color: selectedBlue,
+                          ),
+                          Text(
+                            "Customer care",
+                            style: TextStyle(fontSize: 20, color: selectedBlue),
+                          ),
+                          Text(
+                            "Our customer care services line is available from 8-9pm week days and 9-5 weekends-tap to call us today",
+                            style: TextStyle(fontSize: 10, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Spacer(),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      height: 150,
+                      width: 160,
+                      decoration: ShapeDecoration(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)),
+                          color: darkbackgroundColor2),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(
+                            Icons.headphones,
+                            color: selectedBlue,
+                          ),
+                          Text(
+                            "Customer care",
+                            style: TextStyle(fontSize: 20, color: selectedBlue),
+                          ),
+                          Text(
+                            "Our customer care services line is available from 8-9pm week days and 9-5 weekends-tap to call us today",
+                            style: TextStyle(fontSize: 10, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
-              )
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                child: Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      height: 150,
+                      width: 160,
+                      decoration: ShapeDecoration(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)),
+                          color: darkbackgroundColor2),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(
+                            Icons.headphones,
+                            color: selectedBlue,
+                          ),
+                          Text(
+                            "Customer care",
+                            style: TextStyle(fontSize: 20, color: selectedBlue),
+                          ),
+                          Text(
+                            "Our customer care services line is available from 8-9pm week days and 9-5 weekends-tap to call us today",
+                            style: TextStyle(fontSize: 10, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Spacer(),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      height: 150,
+                      width: 160,
+                      decoration: ShapeDecoration(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)),
+                          color: selectedBlue),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(
+                            Icons.headphones,
+                            color: Colors.white,
+                          ),
+                          Text(
+                            "Customer care",
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          Text(
+                            "Our customer care services line is available from 8-9pm week days and 9-5 weekends-tap to call us today",
+                            style: TextStyle(fontSize: 10, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
       )),
       bottomNavigationBar: BottomAppBar(
-        height: 100,
+        height: 60,
         color: darkbackgroundColor,
         elevation: 0,
+        padding: EdgeInsets.only(top:2),
         child: Row(
           children: [
             Container(
-                padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
                 child: Column(children: [
-                  IconButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, MyRoutes.HomePageRouter);
-                      },
-                      icon: Icon(Icons.home),
-                      color: Color.fromARGB(255, 225, 220, 220)),
-                  Text(
-                    "Home",
-                    style: TextStyle(fontSize: 13, color: Colors.white),
-                  )
-                ])),
+              IconButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, MyRoutes.HomePageRouter);
+                  },
+                  icon: Icon(Icons.home),
+                  color: Color.fromARGB(255, 225, 220, 220)),
+              Text(
+                "Home",
+                style: TextStyle(fontSize: 12, color: Colors.white),
+              )
+            ])),
             Spacer(),
             Container(
-                padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                
                 child: Column(children: [
                   IconButton(
                       onPressed: () {
@@ -190,12 +364,12 @@ class HomePage extends StatelessWidget {
                       color: Color.fromARGB(255, 225, 220, 220)),
                   Text(
                     "Wallet",
-                    style: TextStyle(fontSize: 13, color: Colors.white),
+                    style: TextStyle(fontSize: 12, color: Colors.white),
                   )
                 ])),
             Spacer(),
-           Container(
-                padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+            Container(
+                
                 child: Column(children: [
                   IconButton(
                       onPressed: () {
@@ -205,22 +379,23 @@ class HomePage extends StatelessWidget {
                       color: Color.fromARGB(255, 225, 220, 220)),
                   Text(
                     "Track",
-                    style: TextStyle(fontSize: 13, color: Colors.white),
+                    style: TextStyle(fontSize: 12, color: Colors.white),
                   )
                 ])),
             Spacer(),
-           Container(
-                padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+            Container(
+                
                 child: Column(children: [
                   IconButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, MyRoutes.ProfilePageRouter);
+                        Navigator.pushNamed(
+                            context, MyRoutes.ProfilePageRouter);
                       },
                       icon: Icon(Icons.person),
                       color: Color.fromARGB(255, 225, 220, 220)),
                   Text(
                     "Profile",
-                    style: TextStyle(fontSize: 13, color: Colors.white),
+                    style: TextStyle(fontSize: 12, color: Colors.white),
                   )
                 ])),
           ],
