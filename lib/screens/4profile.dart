@@ -144,7 +144,7 @@ class _ProfileState extends State<Profile> {
                     "Log Out",
                     style: TextStyle(
                         fontSize: 16,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w500,
                         color: Colors.white),
                   ),
                   Spacer(),

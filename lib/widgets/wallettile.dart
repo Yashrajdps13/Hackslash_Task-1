@@ -22,7 +22,7 @@ class _wallet_widgetState extends State<wallet_widget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 5),
       margin: EdgeInsets.symmetric(vertical: 5, horizontal: 0),
       color: boxcolour,
       alignment: Alignment.centerLeft,

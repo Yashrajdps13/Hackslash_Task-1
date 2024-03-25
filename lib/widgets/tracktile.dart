@@ -1,36 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:task1/utils/global.dart';
 
-class profile_tile extends StatefulWidget {
-  final IconData icon;
+class track_widget extends StatefulWidget {
   final String boldtext;
   final String normaltext;
-
-  const profile_tile(
-      {Key? key,
-      required this.icon,
-      required this.boldtext,
-      required this.normaltext});
+  final IconData icon;
+  final Color boldcolor;
+  final Color normalcolor;
+  const track_widget({
+    Key? key,
+    required this.boldtext,
+    required this.normaltext,
+    required this.icon,
+    required this.boldcolor,
+    required this.normalcolor,
+  });
 
   @override
-  State<profile_tile> createState() => _profile_tileState();
+  State<track_widget> createState() => _track_widgetState();
 }
 
-class _profile_tileState extends State<profile_tile> {
+class _track_widgetState extends State<track_widget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: boxcolour,
-      height: MediaQuery.of(context).size.height * 0.07,
-      padding: EdgeInsets.only(top: 8, left: 10, right: 10),
+      height: MediaQuery.of(context).size.height * 0.06,
+      padding: EdgeInsets.only(top: 5, left: 19, right: 10),
       alignment: Alignment.center,
-      margin: EdgeInsets.symmetric(vertical: 5, horizontal: 0),
       child: Row(
         children: [
-          Icon(
-            widget.icon,
-            color: Colors.white,
-            size: 30,
+          Align(
+            alignment: Alignment.topLeft,
+            child: Icon(
+              widget.icon,
+              color: darktextcolour,
+              size: 25,
+            ),
           ),
           SizedBox(
             width: 15,
@@ -44,22 +49,17 @@ class _profile_tileState extends State<profile_tile> {
                 style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
-                    color: Colors.white),
+                    color: widget.boldcolor),
               ),
               Flexible(
                 child: Text(
                   widget.normaltext,
                   maxLines: 1,
-                  style: TextStyle(color: Color(0xffA7A7A7), fontSize: 11),
+                  style: TextStyle(color: widget.normalcolor, fontSize: 11),
                 ),
               ),
             ],
           ),
-          Spacer(),
-          Icon(
-            Icons.navigate_next,
-            color: Colors.white,
-          )
         ],
       ),
     );
