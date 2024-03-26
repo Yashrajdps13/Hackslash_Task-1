@@ -28,7 +28,7 @@ class _WalletState extends State<Wallet> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: NavBar(),
+
         appBar: AppBar(
           backgroundColor: Color.fromRGBO(0, 27, 59, 1),
           centerTitle: true,

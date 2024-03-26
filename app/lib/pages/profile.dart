@@ -11,19 +11,19 @@ class Profile extends StatefulWidget {
 }
 
 class ProfileState extends State<Profile> {
-
+  List<IconData> icons = [Icons.person, Icons.text_snippet, Icons.notifications, Icons.credit_card, Icons.share, Icons.image, Icons.logout];
   List<Settings> settings = [
   Settings(settingsname: 'Edit Profile', description: 'Name, Phone Number, Address, Email'),
   Settings(settingsname: 'Statements and Reports', description: 'Download transaction details, orders, deliveries', ),
     Settings(settingsname: 'Notification Settings', description: 'Mute/Unmute, Set location and Tracking settings', ),
-    Settings(settingsname: 'Card and Bank Account Settings', description: '', ),
-    Settings(settingsname: 'Referrals', description: 'Change cards, Delete card details', ),
+    Settings(settingsname: 'Card and Bank Account Settings', description: 'Change cards, Delete card details', ),
+    Settings(settingsname: 'Referrals', description: 'Check number of friends and earn', ),
     Settings(settingsname: 'About Us', description: 'Know more about us, Terms and Conditions', ),
     Settings(settingsname: 'Log Out', description: '', ),
   ];
   @override
   Widget build(BuildContext context) {
-    return Scaffold (bottomNavigationBar: NavBar(),
+    return Scaffold (
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(0, 27, 59, 1),
         centerTitle: true,
@@ -73,15 +73,21 @@ class ProfileState extends State<Profile> {
                   ],
                 ),
               ),
+              SizedBox(
+                height: 27,
+              ),
               Container(
                 child: Row(
                   children: [
-                    Text('Enable dark Mode',
+                    Text('Enable Dark mode',
                       style: TextStyle(
                           color: Colors.white
                       ),)
                   ],
                 ),
+              ),
+              SizedBox(
+                height: 27,
               ),
               Expanded(
                 child: ListView.builder(
@@ -91,7 +97,8 @@ class ProfileState extends State<Profile> {
                         child: ListTile(
                           tileColor: Color.fromRGBO(0, 27, 59, 1),
                           textColor: Colors.white,
-                          leading: FlutterLogo(),
+                          leading: Icon(icons[index],
+                          color: Colors.white,),
                           title: Text(settings[index].settingsname,
                             style: TextStyle(
                                 fontSize: 16

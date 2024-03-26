@@ -17,14 +17,16 @@ class _NavBarState extends State<NavBar> {
      Wallet(),
      Track(),
      Profile()
-
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: screenList[myIndex],
       bottomNavigationBar: BottomNavigationBar(
-
+      type: BottomNavigationBarType.fixed,
+        selectedItemColor: Color.fromRGBO(5, 96, 250, 1),
+        unselectedItemColor: Colors.white,
+        backgroundColor: Color.fromRGBO(0, 13, 29, 1),
         onTap: (index) {
           setState(() {
 
@@ -35,7 +37,8 @@ class _NavBarState extends State<NavBar> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',),
+            label: 'Home',
+          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_balance_wallet_outlined),
             label: 'Wallet',),

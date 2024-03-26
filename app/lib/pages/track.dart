@@ -13,7 +13,7 @@ class _TrackState extends State<Track> {
   Widget build(BuildContext context) {
     return Material(
         child: Scaffold(
-      bottomNavigationBar: NavBar(),
+
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -38,11 +38,22 @@ class _TrackState extends State<Track> {
                                 fontSize: 16
                             ),),
                           Spacer(),
-                          Text("R-7458-4567-4434-5854",
-                            style: TextStyle(
-                                color: Color.fromRGBO(5, 96, 250,1),
-                                fontSize: 16
-                            ),),
+                          Row(
+                            children: [
+                              Container(
+                                  height:23,
+                                  width:23,
+                                  child: Image.asset("assets/images/trackid.png")),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text("R-7458-4567-4434-5854",
+                                style: TextStyle(
+                                    color: Color.fromRGBO(5, 96, 250,1),
+                                    fontSize: 16
+                                ),),
+                            ],
+                          ),
                           Spacer(),
                           Text("Package Status",
                             style: TextStyle(
