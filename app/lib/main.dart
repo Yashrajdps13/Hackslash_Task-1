@@ -1,9 +1,10 @@
+import 'package:app/pages/home.dart';
+import 'package:app/pages/profile.dart';
+import 'package:app/pages/track.dart';
+import 'package:app/pages/wallet.dart';
+import 'package:app/utilis/routes.dart';
 import 'package:flutter/material.dart';
-import 'package:hackslash_task1/pages/home.dart';
-import 'package:hackslash_task1/pages/profile.dart';
-import 'package:hackslash_task1/pages/track.dart';
-import 'package:hackslash_task1/pages/wallet.dart';
-import 'package:hackslash_task1/utilis/routes.dart';
+
 
 void main() {
   runApp(MyApp());
