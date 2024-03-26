@@ -39,24 +39,32 @@ class _HomeState extends State<Home> {
                   ),
                   height: MediaQuery.of(context).size.height * 0.04,
                   width: MediaQuery.of(context).size.width * 0.875,
-                  child: TextFormField(
+                  child: TextField(
                     cursorColor: Colors.white,
                     style: TextStyle(fontSize: 13, color: Colors.white),
                     decoration: InputDecoration(
-                        contentPadding: EdgeInsets.only(bottom: 13, left: 10),
-                        focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(
-                              color: dark == true ? boxcolour : lightboxcolour,
-                            )),
-                        enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(
-                              color: dark == true ? boxcolour : lightboxcolour,
-                            )),
-                        hintText: "Search services",
-                        hintStyle:
-                            TextStyle(fontSize: 13, color: searchcolour)),
+                      contentPadding: EdgeInsets.only(bottom: 13, left: 10),
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide(
+                            color: dark == true ? boxcolour : lightboxcolour,
+                          )),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide(
+                            color: dark == true ? boxcolour : lightboxcolour,
+                          )),
+                      hintText: "Search services",
+                      hintStyle: TextStyle(fontSize: 13, color: searchcolour),
+                      suffixIcon: Align(
+                        widthFactor: 0.8,
+                        heightFactor: 0.8,
+                        child: Icon(
+                          Icons.search,
+                          color: searchcolour,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -124,7 +132,7 @@ class _HomeState extends State<Home> {
                       Container(
                         height: MediaQuery.of(context).size.height * 0.0758,
                         width: MediaQuery.of(context).size.width * 0.4256,
-                        padding: EdgeInsets.all(1), // Border width
+                        padding: EdgeInsets.all(2), // Border width
                         decoration: ShapeDecoration(
                             shape: RoundedRectangleBorder(
                                 borderRadius:
@@ -133,8 +141,8 @@ class _HomeState extends State<Home> {
                         child: ClipRRect(
                           child: SizedBox.fromSize(
                             size: Size.fromRadius(8), // Image radius
-                            child: Image.asset('assets/images/techmeetup.png',
-                                fit: BoxFit.fitWidth),
+                            child: Image.asset('assets/images/techmeetup2.png',
+                                fit: BoxFit.fitHeight),
                           ),
                         ),
                       ),
@@ -155,7 +163,7 @@ class _HomeState extends State<Home> {
                           child: SizedBox.fromSize(
                             size: Size.fromRadius(8), // Image radius
                             child: Image.asset(
-                                'assets/images/loverevolution.png',
+                                'assets/images/loverevolution2.png',
                                 fit: BoxFit.fitWidth),
                           ),
                         ),
@@ -197,7 +205,7 @@ class _HomeState extends State<Home> {
                         child: ClipRRect(
                           child: SizedBox.fromSize(
                             size: Size.fromRadius(8), // Image radius
-                            child: Image.asset('assets/images/4.png',
+                            child: Image.asset('assets/images/42.png',
                                 fit: BoxFit.fitWidth),
                           ),
                         ),
@@ -219,16 +227,11 @@ class _HomeState extends State<Home> {
                           child: ClipRRect(
                             child: SizedBox.fromSize(
                               size: Size.fromRadius(8), // Image radius
-                              child: Image.asset('assets/images/5.png',
+                              child: Image.asset('assets/images/52.png',
                                   fit: BoxFit.fitWidth),
                             ),
                           ),
                         ),
-                        Center(
-                            child: Text(
-                          "Cooked Up",
-                          style: TextStyle(color: Color(0xff630202)),
-                        )),
                       ]),
                     ],
                   ),

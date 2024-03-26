@@ -13,7 +13,7 @@ class _TrackState extends State<Track> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: dark == true ? boxcolour : Colors.white,
+      backgroundColor: dark == true ? darkbackgroundcolor : Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
