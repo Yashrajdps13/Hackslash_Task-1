@@ -47,7 +47,12 @@ class _profilePageState extends State<profilePage> {
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.bold),
                       ),
-                      Text("current balance: 40,000")
+                      Row(
+                        children: [
+                          Text("current balance: "),
+                          Text("40,000",style: TextStyle(color: Colors.blueAccent),)
+                        ],
+                      ),
                     ],
                   ),
                   Spacer(),
