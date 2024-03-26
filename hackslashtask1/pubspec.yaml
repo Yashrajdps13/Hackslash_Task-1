@@ -63,6 +63,8 @@ flutter:
     - lib/images/blackimg.webp
     - lib/images/R.jpeg
     - lib/images/profile.jpeg
+    - lib/images/map.png
+    - lib/images/mapd.jpeg
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
