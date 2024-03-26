@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       darkTheme: ThemeData(
         useMaterial3: true,
+          fontFamily: 'Roboto',
         appBarTheme: AppBarTheme(titleTextStyle: TextStyle(color: Colors.white70),backgroundColor: lightBackgroundColor),
         iconTheme: IconThemeData(color: Colors.white),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(unselectedItemColor: Colors.white70,backgroundColor: darkBackgroundColor),
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: primaryColor,onSurface: Colors.black),
         iconTheme: IconThemeData(color: Colors.white),
+        fontFamily: 'Roboto',
         useMaterial3: true,
       ),
       initialRoute: MyRoutes.homePage,
