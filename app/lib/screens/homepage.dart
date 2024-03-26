@@ -2,15 +2,19 @@ import 'package:app/material.dart/global.dart';
 import 'package:app/material.dart/routes.dart';
 import 'package:flutter/material.dart';
 
-class Homepage extends StatelessWidget {
+class Homepage extends StatefulWidget {
   const Homepage({super.key});
 
   @override
+  State<Homepage> createState() => _HomepageState();
+}
+
+class _HomepageState extends State<Homepage> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-    
-     body: SafeArea(
-      child: SingleChildScrollView(
+      
+     body: SingleChildScrollView(
        
       child: Container(
         
@@ -19,7 +23,7 @@ class Homepage extends StatelessWidget {
         height: MediaQuery.of(context).size.height,
         color: Maincolor,
         child: Column(children: [
-          SizedBox(height: 45,),
+          SizedBox(height: 60,),
           Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
@@ -50,15 +54,33 @@ class Homepage extends StatelessWidget {
             
             child: Row(
               
+              
               children: [
                
                 Column(
+                  
 
                   children: [
                     Padding(padding: EdgeInsets.only(left: 20)),
+                    Container(
+                      
+                      child: Column(
+                        
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        
+                        children: [
                     Text("Hello Ken", style: TextStyle(fontSize: 30,color: Colors.white),),
                     
-                    Text("We trust you are havong  a great time",style: TextStyle(fontSize: 10,color: Colors.white),),
+                    
+                           Text("We trust you are havong  a great time",style: TextStyle(fontSize: 10,color: Colors.white),),
+                        ],
+                      ),
+
+                    )
+                   
+                    
+                    
                   ],
                 ),
                 Expanded(child: SizedBox(),flex: 1,),
@@ -154,7 +176,7 @@ class Homepage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 10,),
-          Container(
+           Container(
             child: Row(
               children: [
                Container(
@@ -278,6 +300,8 @@ class Homepage extends StatelessWidget {
             ),
           ),
 
+          
+
 
 
         ],),
@@ -286,7 +310,7 @@ class Homepage extends StatelessWidget {
 
 
 
-     ),),
+     ),
     bottomNavigationBar: Container(
       color:secondcolor,
       height: 65,
@@ -342,8 +366,8 @@ class Homepage extends StatelessWidget {
       ],
      ),
      ),
-     
 
+     
      
      
 
@@ -351,6 +375,6 @@ class Homepage extends StatelessWidget {
     );
     
 
-   
+
   }
 }

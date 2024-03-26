@@ -234,6 +234,183 @@ class _WalletState extends State<Wallet> {
                       ),
                     ),
                     SizedBox(height: 15,),
+                      Container(
+                      color: secondcolor,
+                      padding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
+                      
+                      child: Row(
+                        children: [
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            
+                            children: [
+                              Text("Delivery fee",style: TextStyle(color: Colors.white,fontSize: 15),),
+                              Text("July 10,2022",style: TextStyle(color: Colors.grey,fontSize: 12),)
+                            ],
+                          ),
+                          Expanded(child: SizedBox(),flex: 1,),
+                          Text("-N12,000.00",style: TextStyle(color: Colors.red),)
+                        ],
+                      ),
+                    ),
+                     SizedBox(height: 15,),
+                      Container(
+                      color: secondcolor,
+                      padding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
+                      
+                      child: Row(
+                        children: [
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            
+                            children: [
+                              Text("Delivery fee",style: TextStyle(color: Colors.white,fontSize: 15),),
+                              Text("July 7,2022",style: TextStyle(color: Colors.grey,fontSize: 12),)
+                            ],
+                          ),
+                          Expanded(child: SizedBox(),flex: 1,),
+                          Text("-N2,000.00",style: TextStyle(color: Colors.red),)
+                        ],
+                      ),
+                    ),
+                    
+                     SizedBox(height: 15,),
+                      Container(
+                      color: secondcolor,
+                      padding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
+                      
+                      child: Row(
+                        children: [
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            
+                            children: [
+                              Text("Top up",style: TextStyle(color: Colors.white,fontSize: 15),),
+                              Text("July 17,2022",style: TextStyle(color: Colors.grey,fontSize: 12),)
+                            ],
+                          ),
+                          Expanded(child: SizedBox(),flex: 1,),
+                          Text("N20,000.00",style: TextStyle(color: Colors.green),)
+                        ],
+                      ),
+                    ),
+                    
+                     SizedBox(height: 15,),
+                      Container(
+                      color: secondcolor,
+                      padding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
+                      
+                      child: Row(
+                        children: [
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            
+                            children: [
+                              Text("Top up",style: TextStyle(color: Colors.white,fontSize: 15),),
+                              Text("July 6,2022",style: TextStyle(color: Colors.grey,fontSize: 12),)
+                            ],
+                          ),
+                          Expanded(child: SizedBox(),flex: 1,),
+                          Text("N20,000.00",style: TextStyle(color: Colors.green),)
+                        ],
+                      ),
+                    ),
+                    
+                     SizedBox(height: 15,),
+                      Container(
+                      color: secondcolor,
+                      padding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
+                      
+                      child: Row(
+                        children: [
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            
+                            children: [
+                              Text("Delivery fee",style: TextStyle(color: Colors.white,fontSize: 15),),
+                              Text("July 4,2022",style: TextStyle(color: Colors.grey,fontSize: 12),)
+                            ],
+                          ),
+                          Expanded(child: SizedBox(),flex: 1,),
+                          Text("-N15,000.00",style: TextStyle(color: Colors.red),)
+                        ],
+                      ),
+                    ),
+                    
+                     SizedBox(height: 15,),
+                      Container(
+                      color: secondcolor,
+                      padding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
+                      
+                      child: Row(
+                        children: [
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            
+                            children: [
+                              Text("Top up ",style: TextStyle(color: Colors.white,fontSize: 15),),
+                              Text("July 4,2022",style: TextStyle(color: Colors.grey,fontSize: 12),)
+                            ],
+                          ),
+                          Expanded(child: SizedBox(),flex: 1,),
+                          Text("N20,000.00",style: TextStyle(color: Colors.green),)
+                        ],
+                      ),
+                    ),
+                    
+                     SizedBox(height: 15,),
+                      Container(
+                      color: secondcolor,
+                      padding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
+                      
+                      child: Row(
+                        children: [
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            
+                            children: [
+                              Text("Delivery fee",style: TextStyle(color: Colors.white,fontSize: 15),),
+                              Text("July 2,2022",style: TextStyle(color: Colors.grey,fontSize: 12),)
+                            ],
+                          ),
+                          Expanded(child: SizedBox(),flex: 1,),
+                          Text("-N3,000.00",style: TextStyle(color: Colors.red),)
+                        ],
+                      ),
+                    ),
+                    
+                     SizedBox(height: 15,),
+                      Container(
+                      color: secondcolor,
+                      padding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
+                      
+                      child: Row(
+                        children: [
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            
+                            children: [
+                              Text("Top up",style: TextStyle(color: Colors.white,fontSize: 15),),
+                              Text("July 2,2022",style: TextStyle(color: Colors.grey,fontSize: 12),)
+                            ],
+                          ),
+                          Expanded(child: SizedBox(),flex: 1,),
+                          Text("N5,000.00",style: TextStyle(color: Colors.green),)
+                        ],
+                      ),
+                    ),
+                    
+                    
+                    
+                    
                     
                   ],
                 ),

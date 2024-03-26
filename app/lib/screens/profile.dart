@@ -21,7 +21,7 @@ class _ProfileState extends State<Profile> {
         child: Row(
           children: [
               Icon(Icons.slideshow_rounded,color: Colors.blue,size: 20,),
-              SizedBox(width: 100,),
+              SizedBox(width: 113,),
               Text("Profile",style: TextStyle(color: Colors.grey,fontSize: 18),)
           ],
         ),
@@ -52,7 +52,7 @@ class _ProfileState extends State<Profile> {
               Container(
                 child: Row(
                   children: [
-                    Text("Enable Dark mode",style: TextStyle(color: Colors.white),),
+                    Text("Enable dark Mode",style: TextStyle(color: Colors.white),),
                     Expanded(child: SizedBox(),flex: 1,),
                     
                   ],
@@ -73,16 +73,16 @@ class _ProfileState extends State<Profile> {
                         
                         SizedBox(height: 10,),
                         Text("Edit Profile ",style: TextStyle(color: Colors.white,fontSize: 18,),),
-                         Text("Name,Phone no,address,email ...",style: TextStyle(color: Colors.white,fontSize: 10),)
+                         Text("Name,Phone no,address,email ...",style: TextStyle(color: Colors.grey,fontSize: 10),)
                       ],
                     ),
                     Expanded(child: SizedBox(),flex: 1,),
-                    Icon(Icons.arrow_forward_ios,color: Colors.white,)
+                    Icon(Icons.chevron_right_outlined,color: Colors.white,)
                     
                   ],
                 ),
               ),
-                SizedBox(height: 20,),
+                SizedBox(height: 14,),
               Container(
                 color:secondcolor,
                 height: 60,
@@ -97,16 +97,16 @@ class _ProfileState extends State<Profile> {
                         
                         SizedBox(height: 10,),
                         Text("Statements & Reports",style: TextStyle(color: Colors.white,fontSize: 18,),),
-                         Text("Download transaction details,orders,deliveries",style: TextStyle(color: Colors.white,fontSize: 10),)
+                         Text("Download transaction details,orders,deliveries",style: TextStyle(color: Colors.grey,fontSize: 10),)
                       ],
                     ),
                     Expanded(child: SizedBox(),flex: 1,),
-                    Icon(Icons.arrow_forward_ios,color: Colors.white,)
+                    Icon(Icons.chevron_right_outlined,color: Colors.white,)
                     
                   ],
                 ),
               ),
-                SizedBox(height: 20,),
+                SizedBox(height: 14,),
               Container(
                 color:secondcolor,
                 height: 60,
@@ -121,16 +121,16 @@ class _ProfileState extends State<Profile> {
                         
                         SizedBox(height: 10,),
                         Text("Notification Settings",style: TextStyle(color: Colors.white,fontSize: 18,),),
-                         Text("mute,unmute,set location & tracking setting ",style: TextStyle(color: Colors.white,fontSize: 10),)
+                         Text("mute,unmute,set location & tracking setting ",style: TextStyle(color: Colors.grey,fontSize: 10),)
                       ],
                     ),
                     Expanded(child: SizedBox(),flex: 1,),
-                    Icon(Icons.arrow_forward_ios,color: Colors.white,)
+                    Icon(Icons.chevron_right_outlined,color: Colors.white,)
                     
                   ],
                 ),
               ),
-                SizedBox(height: 20,),
+                SizedBox(height: 14,),
               Container(
                 color:secondcolor,
                 height: 60,
@@ -145,16 +145,16 @@ class _ProfileState extends State<Profile> {
                         
                         SizedBox(height: 10,),
                         Text("Card & Bank account settings ",style: TextStyle(color: Colors.white,fontSize: 18,),),
-                         Text("Change cards,delete card details",style: TextStyle(color: Colors.white,fontSize: 10),)
+                         Text("Change cards,delete card details",style: TextStyle(color: Colors.grey,fontSize: 10),)
                       ],
                     ),
                     Expanded(child: SizedBox(),flex: 1,),
-                    Icon(Icons.arrow_forward_ios,color: Colors.white,)
+                    Icon(Icons.chevron_right_outlined,color: Colors.white,)
                     
                   ],
                 ),
               ),
-                SizedBox(height: 20,),
+                SizedBox(height: 14,),
               Container(
                 color:secondcolor,
                 height: 60,
@@ -169,16 +169,16 @@ class _ProfileState extends State<Profile> {
                         
                         SizedBox(height: 10,),
                         Text("Refferals ",style: TextStyle(color: Colors.white,fontSize: 18,),),
-                         Text("check no of friends and earn",style: TextStyle(color: Colors.white,fontSize: 10),)
+                         Text("check no of friends and earn",style: TextStyle(color: Colors.grey,fontSize: 10),)
                       ],
                     ),
                     Expanded(child: SizedBox(),flex: 1,),
-                    Icon(Icons.arrow_forward_ios,color: Colors.white,)
+                    Icon(Icons.chevron_right_outlined,color: Colors.white,)
                     
                   ],
                 ),
               ),
-                SizedBox(height: 20,),
+                SizedBox(height: 14,),
               Container(
                 color:secondcolor,
                 height: 60,
@@ -193,16 +193,16 @@ class _ProfileState extends State<Profile> {
                         
                         SizedBox(height: 10,),
                         Text("About us",style: TextStyle(color: Colors.white,fontSize: 18,),),
-                         Text("Know more about us,terms and conditions ",style: TextStyle(color: Colors.white,fontSize: 10),)
+                         Text("Know more about us,terms and conditions ",style: TextStyle(color: Colors.grey,fontSize: 10),)
                       ],
                     ),
                     Expanded(child: SizedBox(),flex: 1,),
-                    Icon(Icons.arrow_forward_ios,color: Colors.white,)
+                    Icon(Icons.chevron_right_outlined,color: Colors.white,)
                     
                   ],
                 ),
               ),
-                SizedBox(height: 20,),
+                SizedBox(height: 14,),
               Container(
                 color:secondcolor,
                 height: 60,
@@ -221,7 +221,7 @@ class _ProfileState extends State<Profile> {
                       ],
                     ),
                     Expanded(child: SizedBox(),flex: 1,),
-                    Icon(Icons.arrow_forward_ios,color: Colors.white,)
+                    Icon(Icons.chevron_right_outlined,color: Colors.white,)
                     
                   ],
                 ),
