@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:task1/utils/global.dart';
+import 'package:task1/widgets/hometile.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -13,13 +14,13 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: darkbackgroundcolor,
+      backgroundColor: dark == true ? darkbackgroundcolor : Colors.white,
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 24),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-          color: darkbackgroundcolor,
+          color: dark == true ? darkbackgroundcolor : Colors.white,
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Column(
@@ -32,9 +33,10 @@ class _HomeState extends State<Home> {
                 ),
                 Container(
                   decoration: ShapeDecoration(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(4))),
-                      color: boxcolour),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(4))),
+                    color: dark == true ? boxcolour : lightboxcolour,
+                  ),
                   height: MediaQuery.of(context).size.height * 0.04,
                   width: MediaQuery.of(context).size.width * 0.875,
                   child: TextFormField(
@@ -45,12 +47,12 @@ class _HomeState extends State<Home> {
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
                             borderSide: BorderSide(
-                              color: boxcolour,
+                              color: dark == true ? boxcolour : lightboxcolour,
                             )),
                         enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
                             borderSide: BorderSide(
-                              color: boxcolour,
+                              color: dark == true ? boxcolour : lightboxcolour,
                             )),
                         hintText: "Search services",
                         hintStyle:
@@ -66,7 +68,7 @@ class _HomeState extends State<Home> {
                   decoration: ShapeDecoration(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(8))),
-                      color: boxcolour),
+                      color: dark == true ? boxcolour : Color(0xff0560FA)),
                   child: Row(
                     children: [
                       Expanded(child: SizedBox(), flex: 1),
@@ -253,68 +255,28 @@ class _HomeState extends State<Home> {
                 ),
                 Row(
                   children: [
-                    Container(
-                      height: MediaQuery.of(context).size.height * 0.188,
-                      width: MediaQuery.of(context).size.width * 0.407,
-                      padding: EdgeInsets.only(left: 10, top: 10, right: 10),
-                      decoration: ShapeDecoration(
-                          shape: RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(8))),
-                          color: boxcolour),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Icon(Icons.support_agent,
-                              color: darktextcolour, size: 50),
-                          Text("Customer Care",
-                              style: TextStyle(
-                                  color: darktextcolour,
-                                  fontFamily: 'Roboto',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16)),
-                          Text(
-                              "Our customer care service line is available from 8 -9pm week days and 9 - 5 weekends - tap to call us today",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: 'Roboto',
-                                  fontSize: 9)),
-                        ],
-                      ),
-                    ),
+                    home_widget(
+                        boldtext: "Customer Care",
+                        normaltext:
+                            "Our customer care service line is available from 8 -9pm week days and 9 - 5 weekends - tap to call us today",
+                        icon: Icons.support_agent,
+                        boldcolor: darktextcolour,
+                        normalcolor: dark == true ? Colors.white : Colors.black,
+                        backcolor: dark == true ? boxcolour : lightboxcolour,
+                        iconcolor: darktextcolour),
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.188,
                       width: MediaQuery.of(context).size.width * 0.05,
                     ),
-                    Container(
-                      height: MediaQuery.of(context).size.height * 0.188,
-                      width: MediaQuery.of(context).size.width * 0.407,
-                      padding: EdgeInsets.only(left: 10, top: 10, right: 10),
-                      decoration: ShapeDecoration(
-                          shape: RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(8))),
-                          color: boxcolour),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Icon(CupertinoIcons.cube_box,
-                              color: darktextcolour, size: 50),
-                          Text("Send a Package",
-                              style: TextStyle(
-                                  color: darktextcolour,
-                                  fontFamily: 'Roboto',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16)),
-                          Text(
-                              "Request for a driver to pick up or deliver your package for you",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: 'Roboto',
-                                  fontSize: 9)),
-                        ],
-                      ),
-                    ),
+                    home_widget(
+                        boldtext: "Send a Package",
+                        normaltext:
+                            "Request for a driver to pick up or deliver your package for you",
+                        icon: CupertinoIcons.cube_box,
+                        boldcolor: darktextcolour,
+                        normalcolor: dark == true ? Colors.white : Colors.black,
+                        backcolor: dark == true ? boxcolour : lightboxcolour,
+                        iconcolor: darktextcolour),
                   ],
                 ),
                 SizedBox(
@@ -322,66 +284,28 @@ class _HomeState extends State<Home> {
                 ),
                 Row(
                   children: [
-                    Container(
-                      height: MediaQuery.of(context).size.height * 0.188,
-                      width: MediaQuery.of(context).size.width * 0.407,
-                      padding: EdgeInsets.only(left: 10, top: 10, right: 10),
-                      decoration: ShapeDecoration(
-                          shape: RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(8))),
-                          color: boxcolour),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Icon(Icons.wallet, color: darktextcolour, size: 50),
-                          Text("Fund your wallet",
-                              style: TextStyle(
-                                  color: darktextcolour,
-                                  fontFamily: 'Roboto',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16)),
-                          Text(
-                              "To fund your wallet is as easy as ABC, make use of our fast technology and top-up your wallet today",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: 'Roboto',
-                                  fontSize: 9)),
-                        ],
-                      ),
-                    ),
+                    home_widget(
+                        boldtext: "Fund your wallet",
+                        normaltext:
+                            "To fund your wallet is as easy as ABC, make use of our fast technology and top-up your wallet today",
+                        icon: Icons.wallet,
+                        boldcolor: darktextcolour,
+                        normalcolor: dark == true ? Colors.white : Colors.black,
+                        backcolor: dark == true ? boxcolour : lightboxcolour,
+                        iconcolor: darktextcolour),
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.188,
                       width: MediaQuery.of(context).size.width * 0.05,
                     ),
-                    Container(
-                      height: MediaQuery.of(context).size.height * 0.188,
-                      width: MediaQuery.of(context).size.width * 0.407,
-                      padding: EdgeInsets.only(left: 10, top: 10, right: 10),
-                      decoration: ShapeDecoration(
-                          shape: RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(8))),
-                          color: darktextcolour),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Icon(Icons.directions_car,
-                              color: Colors.white, size: 50),
-                          Text("Book a rider",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: 'Roboto',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16)),
-                          Text("Search for available rider within your area",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: 'Roboto',
-                                  fontSize: 9)),
-                        ],
-                      ),
-                    ),
+                    home_widget(
+                        boldtext: "Book a rider",
+                        normaltext:
+                            "Search for available rider within your area",
+                        icon: Icons.directions_car,
+                        boldcolor: Colors.white,
+                        normalcolor: Colors.white,
+                        backcolor: darktextcolour,
+                        iconcolor: Colors.white),
                   ],
                 ),
                 SizedBox(
@@ -389,66 +313,28 @@ class _HomeState extends State<Home> {
                 ),
                 Row(
                   children: [
-                    Container(
-                      height: MediaQuery.of(context).size.height * 0.188,
-                      width: MediaQuery.of(context).size.width * 0.407,
-                      padding: EdgeInsets.only(left: 10, top: 10, right: 10),
-                      decoration: ShapeDecoration(
-                          shape: RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(8))),
-                          color: boxcolour),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Icon(Icons.add, color: darktextcolour, size: 45),
-                          Text("Enroll as a rider",
-                              style: TextStyle(
-                                  color: darktextcolour,
-                                  fontFamily: 'Roboto',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16)),
-                          Text(
-                              "A chance for you to earn as you become one of our delivery agents, enroll and get the necessary trainings from our crew to get started.",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: 'Roboto',
-                                  fontSize: 9)),
-                        ],
-                      ),
-                    ),
+                    home_widget(
+                        boldtext: "Enroll as a rider",
+                        normaltext:
+                            "A chance for you to earn as you become one of our delivery agents, enroll and get the necessary trainings from our crew to get started.",
+                        icon: Icons.add,
+                        boldcolor: darktextcolour,
+                        normalcolor: dark == true ? Colors.white : Colors.black,
+                        backcolor: dark == true ? boxcolour : lightboxcolour,
+                        iconcolor: darktextcolour),
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.188,
                       width: MediaQuery.of(context).size.width * 0.05,
                     ),
-                    Container(
-                      height: MediaQuery.of(context).size.height * 0.188,
-                      width: MediaQuery.of(context).size.width * 0.407,
-                      padding: EdgeInsets.only(left: 10, top: 10, right: 10),
-                      decoration: ShapeDecoration(
-                          shape: RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(8))),
-                          color: boxcolour),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Icon(Icons.money, color: darktextcolour, size: 50),
-                          Text("Refer and Earn",
-                              style: TextStyle(
-                                  color: darktextcolour,
-                                  fontFamily: 'Roboto',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16)),
-                          Text(
-                              "Refer a friend to our platform and stand the chance of winning lots of goodies plus free delivery",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: 'Roboto',
-                                  fontSize: 9)),
-                        ],
-                      ),
-                    ),
+                    home_widget(
+                        boldtext: "Refer and Earn",
+                        normaltext:
+                            "Refer a friend to our platform and stand the chance of winning lots of goodies plus free delivery",
+                        icon: Icons.money,
+                        boldcolor: darktextcolour,
+                        normalcolor: dark == true ? Colors.white : Colors.black,
+                        backcolor: dark == true ? boxcolour : lightboxcolour,
+                        iconcolor: darktextcolour),
                   ],
                 ),
                 SizedBox(

@@ -10,18 +10,20 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
+  static ThemeMode _theme = ThemeMode.system;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Color(0xffA7A7A7)),
+        iconTheme: IconThemeData(
+            color: dark == true ? Color(0xffA7A7A7) : darktextcolour),
         leading: Icon(Icons.arrow_back),
         title: Text("Profile",
             style: TextStyle(fontSize: 16, color: Color(0xffA7A7A7))),
         centerTitle: true,
-        backgroundColor: boxcolour,
+        backgroundColor: dark == true ? boxcolour : Colors.white,
       ),
-      backgroundColor: darkbackgroundcolor,
+      backgroundColor: dark == true ? darkbackgroundcolor : Colors.white,
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 24.0),
         child: Column(
@@ -46,7 +48,7 @@ class _ProfileState extends State<Profile> {
                       style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white),
+                          color: dark == true ? Colors.white : Colors.black),
                     ),
                     Row(
                       children: [
@@ -54,7 +56,7 @@ class _ProfileState extends State<Profile> {
                           "Current balance: ",
                           style: TextStyle(
                               fontSize: 12,
-                              color: Colors.white,
+                              color: dark == true ? Colors.white : Colors.black,
                               fontFamily: 'Roboto'),
                         ),
                         Text(
@@ -71,7 +73,7 @@ class _ProfileState extends State<Profile> {
                 Spacer(),
                 Icon(
                   Icons.visibility_off,
-                  color: Colors.white,
+                  color: dark == true ? Colors.white : Colors.black,
                 )
               ],
             ),
@@ -87,13 +89,21 @@ class _ProfileState extends State<Profile> {
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Roboto',
-                      color: Colors.white),
+                      color: dark == true ? Colors.white : Colors.black),
                 ),
                 Spacer(),
-                Icon(
-                  Icons.radio_button_on,
-                  color: Colors.white,
-                  size: 25,
+                Switch(
+                  value: dark,
+                  onChanged: (bool value) {
+                    setState(() {
+                      dark = value;
+                      if (dark) {
+                        _theme = ThemeMode.dark;
+                      } else {
+                        _theme = ThemeMode.light;
+                      }
+                    });
+                  },
                 )
               ],
             ),
@@ -125,7 +135,7 @@ class _ProfileState extends State<Profile> {
                 boldtext: "About Us",
                 normaltext: "know more about us, terms and conditions "),
             Container(
-              color: boxcolour,
+              color: dark == true ? boxcolour : lightboxcolour,
               height: MediaQuery.of(context).size.height * 0.07,
               padding: EdgeInsets.only(top: 8, left: 10, right: 10),
               alignment: Alignment.center,
@@ -145,12 +155,12 @@ class _ProfileState extends State<Profile> {
                     style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
-                        color: Colors.white),
+                        color: dark == true ? Colors.white : Colors.black),
                   ),
                   Spacer(),
                   Icon(
                     Icons.navigate_next,
-                    color: Colors.white,
+                    color: dark == true ? Colors.white : Colors.black,
                   )
                 ],
               ),

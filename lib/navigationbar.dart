@@ -28,9 +28,9 @@ class _appState extends State<app> {
         child: widgetList[myindex],
       )),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: darkbackgroundcolor,
+        backgroundColor: dark == true ? darkbackgroundcolor : Colors.white,
         type: BottomNavigationBarType.fixed,
-        unselectedItemColor: Colors.white,
+        unselectedItemColor: dark == true ? Colors.white : searchcolour,
         selectedItemColor: darktextcolour,
         onTap: (index) {
           setState(() {

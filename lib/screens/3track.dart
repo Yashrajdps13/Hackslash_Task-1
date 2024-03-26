@@ -13,12 +13,14 @@ class _TrackState extends State<Track> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: darkbackgroundcolor,
+      backgroundColor: dark == true ? boxcolour : Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
             Image(
-              image: AssetImage("assets/images/mapdark.png"),
+              image: dark == true
+                  ? AssetImage("assets/images/mapdark.png")
+                  : AssetImage("assets/images/maplight.png"),
             ),
             SizedBox(
               height: 35,
@@ -28,7 +30,7 @@ class _TrackState extends State<Track> {
               child: Text(
                 "    Tracking Number",
                 style: TextStyle(
-                    color: Colors.white,
+                    color: dark == true ? Colors.white : Colors.black,
                     fontWeight: FontWeight.bold,
                     fontSize: 18),
               ),

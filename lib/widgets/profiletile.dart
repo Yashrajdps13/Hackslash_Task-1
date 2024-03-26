@@ -20,7 +20,7 @@ class _profile_tileState extends State<profile_tile> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: boxcolour,
+      color: dark == true ? boxcolour : lightboxcolour,
       height: MediaQuery.of(context).size.height * 0.07,
       padding: EdgeInsets.only(top: 8, left: 10, right: 10),
       alignment: Alignment.center,
@@ -29,7 +29,7 @@ class _profile_tileState extends State<profile_tile> {
         children: [
           Icon(
             widget.icon,
-            color: Colors.white,
+            color: dark == true ? Colors.white : Colors.black,
             size: 30,
           ),
           SizedBox(
@@ -44,7 +44,7 @@ class _profile_tileState extends State<profile_tile> {
                 style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
-                    color: Colors.white),
+                    color: dark == true ? Colors.white : Colors.black),
               ),
               Flexible(
                 child: Text(
@@ -58,7 +58,7 @@ class _profile_tileState extends State<profile_tile> {
           Spacer(),
           Icon(
             Icons.navigate_next,
-            color: Colors.white,
+            color: dark == true ? Colors.white : Colors.black,
           )
         ],
       ),

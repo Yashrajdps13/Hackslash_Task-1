@@ -24,7 +24,7 @@ class _wallet_widgetState extends State<wallet_widget> {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 16, vertical: 5),
       margin: EdgeInsets.symmetric(vertical: 5, horizontal: 0),
-      color: boxcolour,
+      color: dark == true ? boxcolour : lightboxcolour,
       alignment: Alignment.centerLeft,
       child: Row(
         children: [
@@ -36,7 +36,7 @@ class _wallet_widgetState extends State<wallet_widget> {
                 Text(
                   widget.boldtext,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: dark == true ? Colors.white : Colors.black,
                     fontWeight: FontWeight.w500,
                     fontSize: 16,
                   ),
@@ -44,7 +44,9 @@ class _wallet_widgetState extends State<wallet_widget> {
                 Text(
                   widget.normaltext,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(color: Colors.white, fontSize: 10),
+                  style: TextStyle(
+                      color: dark == true ? Colors.white : Colors.black,
+                      fontSize: 10),
                 ),
               ],
             ),

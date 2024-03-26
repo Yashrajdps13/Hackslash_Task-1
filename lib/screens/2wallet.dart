@@ -13,14 +13,15 @@ class _WalletState extends State<Wallet> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: darkbackgroundcolor,
+      backgroundColor: dark == true ? darkbackgroundcolor : Colors.white,
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Color(0xffA7A7A7)),
+        iconTheme: IconThemeData(
+            color: dark == true ? Color(0xffA7A7A7) : darktextcolour),
         leading: Icon(Icons.arrow_back),
         title: Text("Wallet",
             style: TextStyle(fontSize: 16, color: Color(0xffA7A7A7))),
         centerTitle: true,
-        backgroundColor: darkbackgroundcolor,
+        backgroundColor: dark == true ? boxcolour : Colors.white,
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 24.0),
@@ -46,7 +47,7 @@ class _WalletState extends State<Wallet> {
                       style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white),
+                          color: dark == true ? Colors.white : Colors.black),
                     ),
                     Row(
                       children: [
@@ -54,7 +55,7 @@ class _WalletState extends State<Wallet> {
                           "Current balance: ",
                           style: TextStyle(
                               fontSize: 12,
-                              color: Colors.white,
+                              color: dark == true ? Colors.white : Colors.black,
                               fontFamily: 'Roboto'),
                         ),
                         Text(
@@ -71,7 +72,7 @@ class _WalletState extends State<Wallet> {
                 Spacer(),
                 Icon(
                   Icons.visibility_off,
-                  color: Colors.white,
+                  color: dark == true ? Colors.white : Colors.black,
                 )
               ],
             ),
@@ -83,14 +84,14 @@ class _WalletState extends State<Wallet> {
               decoration: ShapeDecoration(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(10))),
-                  color: boxcolour),
+                  color: dark == true ? boxcolour : searchcolour),
               child: Column(
                 children: [
                   Center(
                     child: Text(
                       "Top Up",
                       style: TextStyle(
-                          color: Colors.white,
+                          color: dark == true ? Colors.white : Colors.black,
                           fontWeight: FontWeight.bold,
                           fontSize: 18),
                     ),
@@ -125,7 +126,8 @@ class _WalletState extends State<Wallet> {
                             Text(
                               "Bank",
                               style: TextStyle(
-                                color: Colors.white,
+                                color:
+                                    dark == true ? Colors.white : Colors.black,
                               ),
                             ),
                           ],
@@ -154,7 +156,8 @@ class _WalletState extends State<Wallet> {
                             Text(
                               "Transfer",
                               style: TextStyle(
-                                color: Colors.white,
+                                color:
+                                    dark == true ? Colors.white : Colors.black,
                               ),
                             ),
                           ],
@@ -182,7 +185,8 @@ class _WalletState extends State<Wallet> {
                             Text(
                               "Card",
                               style: TextStyle(
-                                color: Colors.white,
+                                color:
+                                    dark == true ? Colors.white : Colors.black,
                               ),
                             ),
                           ],
@@ -201,7 +205,7 @@ class _WalletState extends State<Wallet> {
               child: Text(
                 "Transaction History",
                 style: TextStyle(
-                    color: Colors.white,
+                    color: dark == true ? Colors.white : Colors.black,
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               ),
