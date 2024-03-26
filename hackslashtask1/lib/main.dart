@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
      debugShowCheckedModeBanner: false,
      initialRoute: "/",
      routes: {
-      "/":(context) => ProfilePage(),
+      "/":(context) => HomePage(),
       MyRoutes.HomePageRouter:(context) => HomePage(),
       MyRoutes.WalletPageRouter:(context) => WalletPage(),
       MyRoutes.TrackPageRouter:(context) => TrackPage(),

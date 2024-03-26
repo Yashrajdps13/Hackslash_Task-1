@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hackslashtask1/utils/global.dart';
+import 'package:hackslashtask1/utils/routes.dart';
 
 class TrackPage extends StatelessWidget {
   const TrackPage({super.key});
@@ -38,7 +39,7 @@ class TrackPage extends StatelessWidget {
                           fontWeight: FontWeight.bold),
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 15,
                     ),
                     Row(
                       children: [
@@ -49,116 +50,116 @@ class TrackPage extends StatelessWidget {
                       ],
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 15,
                     ),
                     Text("Package Status",
                         style: TextStyle(fontSize: 16, color: Colors.white60)),
                     SizedBox(
+                      height: 15,
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.check_box,
+                          color: selectedBlue,
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "  Courier requested",
+                              style: TextStyle(
+                                  fontSize: 14, color: Colors.white60),
+                            ),
+                            Text(
+                              "  March 26 2024 08:00am ",
+                              style: TextStyle(fontSize: 13, color: text3),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 11,
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.check_box,
+                          color: selectedBlue,
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "  Courier requested",
+                              style: TextStyle(
+                                  fontSize: 14, color: Colors.white60),
+                            ),
+                            Text(
+                              "  March 26 2024 08:00am ",
+                              style: TextStyle(fontSize: 13, color: text3),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 11,
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.square_outlined,
+                          color: selectedBlue,
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "  Courier requested",
+                              style: TextStyle(
+                                  fontSize: 14, color: Colors.white60),
+                            ),
+                            Text(
+                              "  March 26 2024 08:00am ",
+                              style: TextStyle(fontSize: 13, color: text3),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 11,
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.square_outlined,
+                          color: selectedBlue,
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "  Courier requested",
+                              style: TextStyle(
+                                  fontSize: 14, color: Colors.white54),
+                            ),
+                            Text(
+                              "  March 26 2024 08:00am ",
+                              style: TextStyle(fontSize: 13, color: text3),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
                       height: 20,
-                    ),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.check_box,
-                          color: selectedBlue,
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "  Courier requested",
-                              style: TextStyle(
-                                  fontSize: 16, color: Colors.white60),
-                            ),
-                            Text(
-                              "  March 26 2024 08:00am ",
-                              style: TextStyle(fontSize: 15, color: text3),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.check_box,
-                          color: selectedBlue,
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "  Courier requested",
-                              style: TextStyle(
-                                  fontSize: 16, color: Colors.white60),
-                            ),
-                            Text(
-                              "  March 26 2024 08:00am ",
-                              style: TextStyle(fontSize: 15, color: text3),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.square_outlined,
-                          color: selectedBlue,
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "  Courier requested",
-                              style: TextStyle(
-                                  fontSize: 16, color: Colors.white60),
-                            ),
-                            Text(
-                              "  March 26 2024 08:00am ",
-                              style: TextStyle(fontSize: 15, color: text3),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.square_outlined,
-                          color: selectedBlue,
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "  Courier requested",
-                              style: TextStyle(
-                                  fontSize: 16, color: Colors.white54),
-                            ),
-                            Text(
-                              "  March 26 2024 08:00am ",
-                              style: TextStyle(fontSize: 15, color: text3),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 30,
                     ),
                     InkWell(
                       onTap: () => {},
@@ -188,6 +189,75 @@ class TrackPage extends StatelessWidget {
           ),
         ),
       )),
+        bottomNavigationBar: BottomAppBar(
+        height: 90,
+        color: darkbackgroundColor,
+        elevation: 0,
+        
+        child: Row(
+          children: [
+            Container(
+                child: Column(children: [
+              IconButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, MyRoutes.HomePageRouter);
+                  },
+                  icon: Icon(Icons.home),
+                  color: Color.fromARGB(255, 225, 220, 220)),
+              Text(
+                "Home",
+                style: TextStyle(fontSize: 12, color: Colors.white),
+              )
+            ])),
+            Spacer(),
+            Container(
+                
+                child: Column(children: [
+                  IconButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, MyRoutes.WalletPageRouter);
+                      },
+                      icon: Icon(Icons.wallet),
+                      color: Color.fromARGB(255, 225, 220, 220)),
+                  Text(
+                    "Wallet",
+                    style: TextStyle(fontSize: 12, color: Colors.white),
+                  )
+                ])),
+            Spacer(),
+            Container(
+                
+                child: Column(children: [
+                  IconButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, MyRoutes.TrackPageRouter);
+                      },
+                      icon: Icon(Icons.track_changes_outlined),
+                      color: selectedBlue),
+                  Text(
+                    "Track",
+                    style: TextStyle(fontSize: 12, color: selectedBlue),
+                  )
+                ])),
+            Spacer(),
+            Container(
+                
+                child: Column(children: [
+                  IconButton(
+                      onPressed: () {
+                        Navigator.pushNamed(
+                            context, MyRoutes.ProfilePageRouter);
+                      },
+                      icon: Icon(Icons.person),
+                      color: Color.fromARGB(255, 225, 220, 220)),
+                  Text(
+                    "Profile",
+                    style: TextStyle(fontSize: 12, color: Colors.white),
+                  )
+                ])),
+          ],
+        ),
+      ),
     );
   }
 }

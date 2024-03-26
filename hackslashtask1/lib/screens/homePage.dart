@@ -33,13 +33,13 @@ class HomePage extends StatelessWidget {
                 child: Row(children: [
                   Text(
                     "Search services",
-                    style: TextStyle(color: Colors.white54, fontSize: 13),
+                    style: TextStyle(color: const Color.fromARGB(179, 235, 227, 227), fontSize: 13),
                   ),
                   SizedBox(width: 190),
-                  Icon(Icons.search_outlined, color: Colors.white54)
+                  Icon(Icons.search_outlined, color: const Color.fromARGB(179, 235, 227, 227))
                 ]),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 20),
               Container(
                 padding: EdgeInsets.only(left: 15, right: 10),
                 height: 100,
@@ -73,13 +73,13 @@ class HomePage extends StatelessWidget {
                     ),
                     SizedBox(width: 70),
                     Icon(
-                      Icons.access_alarms_sharp,
+                      Icons.notifications_outlined,
                       color: Colors.white,
                     )
                   ],
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 25),
               Container(
                 child: Row(children: [
                   Text(
@@ -199,17 +199,17 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 25),
               Text("What would you like to do",
                   style: TextStyle(fontSize: 18, color: Colors.blue)),
-              SizedBox(height: 30),
+              SizedBox(height: 25),
               Container(
                 child: Row(
                   children: [
                     Container(
                       padding: EdgeInsets.all(10),
-                      height: 150,
-                      width: 160,
+                      height: 140,
+                      width: 165,
                       decoration: ShapeDecoration(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)),
@@ -236,8 +236,8 @@ class HomePage extends StatelessWidget {
                     Spacer(),
                     Container(
                       padding: EdgeInsets.all(10),
-                      height: 150,
-                      width: 160,
+                      height: 140,
+                      width: 165,
                       decoration: ShapeDecoration(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)),
@@ -272,8 +272,8 @@ class HomePage extends StatelessWidget {
                   children: [
                     Container(
                       padding: EdgeInsets.all(10),
-                      height: 150,
-                      width: 160,
+                      height: 140,
+                      width: 165,
                       decoration: ShapeDecoration(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)),
@@ -300,8 +300,8 @@ class HomePage extends StatelessWidget {
                     Spacer(),
                     Container(
                       padding: EdgeInsets.all(10),
-                      height: 150,
-                      width: 160,
+                      height: 140,
+                      width: 165,
                       decoration: ShapeDecoration(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)),
@@ -333,10 +333,10 @@ class HomePage extends StatelessWidget {
         ),
       )),
       bottomNavigationBar: BottomAppBar(
-        height: 60,
+        height: 90,
         color: darkbackgroundColor,
         elevation: 0,
-        padding: EdgeInsets.only(top:2),
+        
         child: Row(
           children: [
             Container(
@@ -346,10 +346,10 @@ class HomePage extends StatelessWidget {
                     Navigator.pushNamed(context, MyRoutes.HomePageRouter);
                   },
                   icon: Icon(Icons.home),
-                  color: Color.fromARGB(255, 225, 220, 220)),
+                  color: selectedBlue),
               Text(
                 "Home",
-                style: TextStyle(fontSize: 12, color: Colors.white),
+                style: TextStyle(fontSize: 12, color: selectedBlue),
               )
             ])),
             Spacer(),
