@@ -11,12 +11,13 @@ class profile extends StatefulWidget {
 }
 
 class _profileState extends State<profile> {
+  bool dark = true;
+  static ThemeMode _theme = ThemeMode.system;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
 
       appBar: AppBar(
-
         iconTheme:
         IconThemeData(color: Colors.blue),
         leading: Icon(Icons.arrow_back),
@@ -67,7 +68,25 @@ class _profileState extends State<profile> {
                   children: [
                     Text("Enable dark Mode", style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),),
                     Spacer(),
-                    Text("darm mode button"),
+                    Switch(
+                      activeColor: Colors.white,
+                      activeTrackColor: Colors.blue,
+                      value: dark,
+                      onChanged: (bool value) {
+                        setState(() {
+                          dark = value;
+                          if (dark) {
+                            _theme = ThemeMode.dark;
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(const SnackBar(
+                                   content: Text("Dark Mode"),
+                            ));
+                          } else {
+                            _theme = ThemeMode.light;
+                          }
+                        });
+                      },
+                    )
                   ],
                 ),
               ),
@@ -85,7 +104,7 @@ class _profileState extends State<profile> {
               prof_widget(icon: Icons.image, boldtext: "About Us", normaltext: "know more about us, terms and conditions"),
               SizedBox(height: 10,),
               Container(
-                padding: EdgeInsets.symmetric(horizontal:15 ,vertical:15 ),
+                padding: EdgeInsets.symmetric(horizontal:13 ,vertical:13 ),
                 color: primaryboxcolor,
                 alignment: Alignment.centerLeft,
                 child:Row(

@@ -24,7 +24,7 @@ class _wallet_widgetState extends State<wallet_widget> {
   Widget build(BuildContext context) {
     return
       Container(
-        padding: EdgeInsets.symmetric(horizontal:15 ,vertical:15 ),
+        padding: EdgeInsets.symmetric(horizontal:12 ,vertical:12 ),
         color: primaryboxcolor,
         alignment: Alignment.centerLeft,
 

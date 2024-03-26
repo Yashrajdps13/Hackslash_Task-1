@@ -13,25 +13,22 @@ class _walletpageState extends State<walletpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+
+        iconTheme:
+        IconThemeData(color: Colors.blue),
+        leading: Icon(Icons.arrow_back),
+        title: Text("Wallet", style: TextStyle(color:Colors.grey),),
+        centerTitle: true,
+        backgroundColor: backgroundcolor,
+      ),
       backgroundColor: backgroundcolor,
       body:SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 20,vertical: 40),
-
+          padding: EdgeInsets.symmetric(horizontal: 15,vertical: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
-                child: Row(
-                  children: [
-                     Icon(Icons.arrow_back,color: Colors.white,),
-                    Spacer(),
-                    Text("Wallet",style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold, fontSize: 20, ),),
-                    Spacer(),
-                  ],
-                ),
-              ),
               SizedBox(height: 20,),
               Container(
                 child: Row(
@@ -64,8 +61,12 @@ class _walletpageState extends State<walletpage> {
               ),
               SizedBox(height: 30,),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 30,vertical: 15),
-                color: primaryboxcolor,
+                decoration: BoxDecoration(
+                  color: primaryboxcolor,
+                  borderRadius: BorderRadius.all(Radius.circular(10))
+                ),
+                padding: EdgeInsets.symmetric(horizontal: 30,vertical: 10),
+
                 child: Column(
                   children: [
                     Center(child: Text("Top Up",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15),),),
@@ -75,9 +76,7 @@ class _walletpageState extends State<walletpage> {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Column(
-
                             children: [
-
                               ClipOval(
                                 child: Container(
                                   width: 60,
@@ -87,7 +86,7 @@ class _walletpageState extends State<walletpage> {
                                     shape: BoxShape.circle,
                                     image: DecorationImage(
                                       image: AssetImage('assets/images/bank.png'),
-                                      scale: 0.6,
+                                      scale: 0.78,
                                     ),
                                   ),
                                 ),
@@ -108,7 +107,7 @@ class _walletpageState extends State<walletpage> {
                                     shape: BoxShape.circle,
                                     image: DecorationImage(
                                       image: AssetImage('assets/images/transfer.png'),
-                                      scale: 0.6,
+                                      scale: 0.78,
                                     ),
                                   ),
                                 ),
@@ -129,7 +128,7 @@ class _walletpageState extends State<walletpage> {
                                     shape: BoxShape.circle,
                                     image: DecorationImage(
                                       image: AssetImage('assets/images/card.png'),
-                                      scale: 0.6,
+                                      scale: 0.78,
                                     ),
                                   ),
                                 ),
@@ -144,38 +143,38 @@ class _walletpageState extends State<walletpage> {
                 ),
               ),
 
-              SizedBox(height: 30,),
+              SizedBox(height: 20,),
               Text("Transaction History",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 18),),
 
               SizedBox(height: 20,),
               wallet_widget(boldtext: "Delivery fee", normaltext: "July 7, 2022", Number: "-N3,000.00", color: Colors.red),
-              SizedBox(height: 10,),
+              SizedBox(height: 8,),
               wallet_widget(boldtext: "Delivery fee", normaltext: "July 7, 2022", Number: "-N2,000.00", color: Colors.red),
-              SizedBox(height: 10,),
+              SizedBox(height: 8,),
               wallet_widget(boldtext: "Top up", normaltext: "July 28, 2022", Number: "N10,000.00", color: Colors.green),
-              SizedBox(height: 10,),
+              SizedBox(height: 8,),
               wallet_widget(boldtext: "Delivery fee", normaltext: "July 25, 2022", Number: "-N2,000.00", color: Colors.red),
-              SizedBox(height: 10,),
+              SizedBox(height: 8,),
               wallet_widget(boldtext: "Top up", normaltext: "July 25, 2022", Number: "N5,000.00", color: Colors.green),
-              SizedBox(height: 10,),
+              SizedBox(height: 8,),
               wallet_widget(boldtext: "Delivery fee", normaltext: "July 17, 2022", Number: "-N4,000.00", color: Colors.red),
-              SizedBox(height: 10,),
+              SizedBox(height: 8,),
               wallet_widget(boldtext: "Delivery fee", normaltext: "July 10, 2022", Number: "-N12,000.00", color: Colors.red),
-              SizedBox(height: 10,),
+              SizedBox(height: 8,),
               wallet_widget(boldtext: "Delivery fee", normaltext: "July 7, 2022", Number: "-N2,000.00", color: Colors.red),
-              SizedBox(height: 10,),
+              SizedBox(height: 8,),
               wallet_widget(boldtext: "Top up", normaltext: "July 7, 2022", Number: "N20,000.00", color: Colors.green),
-              SizedBox(height: 10,),
+              SizedBox(height: 8,),
               wallet_widget(boldtext: "Top up", normaltext: "July 6, 2022", Number: "N20,000.00", color: Colors.green),
-              SizedBox(height: 10,),
+              SizedBox(height: 8,),
               wallet_widget(boldtext: "Delivery fee", normaltext: "July 4, 2022", Number: "-N15,000.00", color: Colors.red),
-              SizedBox(height: 10,),
+              SizedBox(height: 8,),
               wallet_widget(boldtext: "Top up", normaltext: "July 4, 2022", Number: "N20,000.00", color: Colors.green),
-              SizedBox(height: 10,),
+              SizedBox(height: 8,),
               wallet_widget(boldtext: "Delivery fee", normaltext: "July 2, 2022", Number: "-N3,000.00", color: Colors.red),
-              SizedBox(height: 10,),
+              SizedBox(height: 8,),
               wallet_widget(boldtext: "Top up", normaltext: "July 2, 2022", Number: "N5,000.00", color: Colors.green),
-              SizedBox(height: 10,),
+              SizedBox(height: 8,),
 
             ],
           ),

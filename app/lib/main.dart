@@ -1,7 +1,7 @@
 import 'package:app/pages/home.dart';
 import 'package:flutter/material.dart';
 
-import 'navigation.dart';
+import 'utilities/navigation.dart';
 
 void main(){
   runApp(const myapp());

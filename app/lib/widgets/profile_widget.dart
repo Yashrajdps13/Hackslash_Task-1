@@ -21,7 +21,7 @@ class _prof_widgetState extends State<prof_widget> {
   Widget build(BuildContext context) {
     return
       Container(
-      padding: EdgeInsets.symmetric(horizontal:15 ,vertical:15 ),
+      padding: EdgeInsets.symmetric(horizontal:13 ,vertical:13 ),
       color: primaryboxcolor,
       alignment: Alignment.centerLeft,
 

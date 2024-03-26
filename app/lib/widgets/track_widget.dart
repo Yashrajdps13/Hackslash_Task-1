@@ -23,13 +23,13 @@ class _tracking_widgetState extends State<tracking_widget> {
   Widget build(BuildContext context) {
     return
       Container(
-        padding: EdgeInsets.symmetric(horizontal:15 ,vertical:15 ),
+        padding: EdgeInsets.symmetric(vertical:10 ),
         color: backgroundcolor,
         alignment: Alignment.centerLeft,
 
         child:Row(
           children: [
-            Icon(widget.box, color: Colors.blue,),
+            Icon(widget.box, color: Colors.blue,size: 25,),
             SizedBox(width: 8,),
             Container(
               child: Column(
@@ -37,7 +37,7 @@ class _tracking_widgetState extends State<tracking_widget> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(widget.greytext,
-                    style: TextStyle(color: widget.color,fontWeight: FontWeight.bold, fontSize: 18,),
+                    style: TextStyle(color: widget.color,fontWeight: FontWeight.bold, fontSize: 16,),
                   ),
                   Text(widget.normaltext,
                     overflow: TextOverflow.ellipsis,
