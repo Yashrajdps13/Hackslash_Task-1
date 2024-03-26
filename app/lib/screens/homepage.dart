@@ -1,5 +1,8 @@
 import 'package:app/material.dart/global.dart';
-import 'package:app/material.dart/routes.dart';
+
+import 'package:app/screens/profile.dart';
+import 'package:app/screens/track.dart';
+import 'package:app/screens/wallet.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
@@ -10,6 +13,12 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+  int myIndex=0;
+  List<Widget> widgetList = const [
+   Wallet(),
+   Track(),
+   Profile(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,9 +27,9 @@ class _HomepageState extends State<Homepage> {
        
       child: Container(
         
+        
         padding: EdgeInsets.symmetric(horizontal: 20),
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
+        
         color: Maincolor,
         child: Column(children: [
           SizedBox(height: 60,),
@@ -102,10 +111,14 @@ class _HomepageState extends State<Homepage> {
             ),
           ),
           SizedBox(height:10,),
-          Container(
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+         child:  Container(
+            
             child: Row(
               children: [
               Container(
+                
                 height: 80,
                 width: 150,
                 child: Column(
@@ -161,10 +174,88 @@ class _HomepageState extends State<Homepage> {
                  ),
                  
                 
-              )
+              ),
+              SizedBox(width: 20,),
+               Container(
+                
+                height: 80,
+                width: 150,
+                child: Column(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                 crossAxisAlignment: CrossAxisAlignment.start,
+                  
+                 
+                ),
+               
+                 decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage("assets/images/Flower.png"),
+                   fit: BoxFit.cover,),
+                  borderRadius: BorderRadius.circular(5),
+                  
+                  color: Colors.orange,
+                
+                  
+                 ),
+                 
+                
+              ),
+              Padding(padding: EdgeInsets.all(10),),
+               Container(
+                
+                height: 80,
+                width: 150,
+                child: Column(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                 crossAxisAlignment: CrossAxisAlignment.start,
+                  
+               
+                ),
+               
+                 decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage("assets/images/Human.png"),
+                   fit: BoxFit.cover,),
+                  borderRadius: BorderRadius.circular(5),
+                  
+                  color: Colors.orange,
+                
+                  
+                 ),
+                 
+                
+              ),
+              Padding(padding: EdgeInsets.all(10),),
+               Container(
+                
+                height: 80,
+                width: 150,
+                child: Column(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                 crossAxisAlignment: CrossAxisAlignment.center,
+                  
+                  children: [
+                    
+                    Text("Cooked up",style: TextStyle(color: Colors.white,fontSize: 10),),
+                     
+                    
+                  ],
+                ),
+               
+                 decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage("assets/images/Circle.png"),
+                   fit: BoxFit.cover,),
+                  borderRadius: BorderRadius.circular(5),
+                  
+                  color: Colors.orange,
+                
+                  
+                 ),
+                 
+                
+              ),
+              Padding(padding: EdgeInsets.all(10),),
               ],
             ),
-          ),
+          ),),
           SizedBox(height: 30,),
           Container(
             child: Row(
@@ -175,13 +266,14 @@ class _HomepageState extends State<Homepage> {
               ],
             ),
           ),
-          SizedBox(height: 10,),
+          SizedBox(height: 20,),
            Container(
             child: Row(
               children: [
                Container(
-                height: 200,
+               
                 width: 150,
+                padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
                 
                 decoration: BoxDecoration(
                   
@@ -208,7 +300,8 @@ class _HomepageState extends State<Homepage> {
                ),
                SizedBox(width: 15,),
                Container(
-                height: 200,
+                 padding: EdgeInsets.symmetric(horizontal: 10,vertical: 35),
+                
                 width: 150,
                 
                 decoration: BoxDecoration(
@@ -220,14 +313,14 @@ class _HomepageState extends State<Homepage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   
                   children: [
-                    SizedBox(height: 10,),
+                    
                     Padding(padding:EdgeInsets.only(left: 10)),
                     Icon(Icons.source_rounded,color:Colors.lightBlue,size: 30,),
                     SizedBox(height: 5,),
                     Text("Send a package",style: TextStyle(color: Colors.lightBlue,fontSize: 20),),
                     SizedBox(height: 5,),
-                    Text("Request for a driver to pick up or ",style: TextStyle(color: Colors.white,fontSize: 12),),
-                    Text("deliver your package for you",style: TextStyle(color: Colors.white,fontSize: 12),),
+                    Text("Request for a driver to pick up or deliver your ",style: TextStyle(color: Colors.white,fontSize: 12),),
+                    Text(" package for you",style: TextStyle(color: Colors.white,fontSize: 12),),
                     
                   ],
                   
@@ -241,8 +334,10 @@ class _HomepageState extends State<Homepage> {
             child: Row(
               children: [
                Container(
-                height: 200,
+               
                 width: 150,
+                padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                
                 
                 decoration: BoxDecoration(
                   
@@ -259,8 +354,8 @@ class _HomepageState extends State<Homepage> {
                     Text("Fund your wallet",style: TextStyle(color: Colors.lightBlue,fontSize: 20),),
                     SizedBox(height: 5,),
                     Text("To fund your wallet is an easy as ABC, ",style: TextStyle(color: Colors.white,fontSize: 12),),
-                    Text("make use of our fast technology and ",style: TextStyle(color: Colors.white,fontSize: 12),),
-                    Text("top-up your wallet today",style: TextStyle(color: Colors.white,fontSize: 12),)
+                    Text("make use of our fast technology and top-up ",style: TextStyle(color: Colors.white,fontSize: 12),),
+                    Text(" your wallet today",style: TextStyle(color: Colors.white,fontSize: 12),)
                 
 
                   ],
@@ -269,8 +364,78 @@ class _HomepageState extends State<Homepage> {
                ),
                SizedBox(width: 15,),
                Container(
+                
                 height: 200,
                 width: 150,
+                 padding: EdgeInsets.symmetric(horizontal: 10,vertical: 40),
+                
+                decoration: BoxDecoration(
+                  
+                  color: Colors.blue,
+                  borderRadius:BorderRadius.circular(10)
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  
+                  children: [
+                   
+                    Padding(padding:EdgeInsets.only(left: 10)),
+                    Icon(Icons.drive_eta_rounded,color:Colors.white,size: 30,),
+                    SizedBox(height: 5,),
+                    Text("Book a rider",style: TextStyle(color: Colors.white,fontSize: 20),),
+                    SizedBox(height: 5,),
+                    Text("search for available rider within your",style: TextStyle(color: Colors.white,fontSize: 12),),
+                    Text("area",style: TextStyle(color: Colors.white,fontSize: 12),),
+                  
+                
+
+                  ],
+                  
+                ),
+               ),
+              ],
+            ),
+          ),
+           SizedBox(height: 20,),
+           Container(
+            child: Row(
+              children: [
+               Container(
+                
+                width: 150,
+                padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                
+                
+                decoration: BoxDecoration(
+                  
+                  color: secondcolor,
+                  borderRadius:BorderRadius.circular(10)
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children:[
+                    SizedBox(height: 10,),
+                    Padding(padding:EdgeInsets.only(left: 10)),
+                    Icon(Icons.motorcycle,color:Colors.lightBlue,size: 30,),
+                    SizedBox(height: 5,),
+                    Text("Enroll as rider",style: TextStyle(color: Colors.lightBlue,fontSize: 20),),
+                    SizedBox(height: 5,),
+                    Text("A chance for you to",style: TextStyle(color: Colors.white,fontSize: 12),),
+                    Text("earn as you become ",style: TextStyle(color: Colors.white,fontSize: 12),),
+                    Text("one of our delivery agents, enroll and ",style: TextStyle(color: Colors.white,fontSize: 12),),
+                    Text("get the neccessary training from our crew ",style: TextStyle(color: Colors.white,fontSize: 12),)
+                
+
+                  ],
+                  
+                ),
+               ),
+               SizedBox(width: 15,),
+               Container(
+                padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                
+                width: 150,
+                height: 200,
                 
                 decoration: BoxDecoration(
                   
@@ -281,14 +446,16 @@ class _HomepageState extends State<Homepage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   
                   children: [
-                    SizedBox(height: 10,),
+                    SizedBox(height: 10 ,),
                     Padding(padding:EdgeInsets.only(left: 10)),
-                    Icon(Icons.drive_eta_rounded,color:Colors.lightBlue,size: 30,),
+                    Icon(Icons.people,color:Colors.lightBlue,size: 30,),
                     SizedBox(height: 5,),
-                    Text("Book a rider",style: TextStyle(color: Colors.lightBlue,fontSize: 20),),
+                    Text("Refer & Earn",style: TextStyle(color: Colors.lightBlue,fontSize: 20),),
                     SizedBox(height: 5,),
-                    Text("search for available rider within your",style: TextStyle(color: Colors.white,fontSize: 12),),
-                    Text("area",style: TextStyle(color: Colors.white,fontSize: 12),),
+                    Text("Refer a friend to our",style: TextStyle(color: Colors.white,fontSize: 12),),
+                    Text("platform and stand the ",style: TextStyle(color: Colors.white,fontSize: 12),),
+                     Text("chance of winning lots of goodies plus free delivery",style: TextStyle(color: Colors.white,fontSize: 12),),
+                    
                   
                 
 
@@ -311,66 +478,7 @@ class _HomepageState extends State<Homepage> {
 
 
      ),
-    bottomNavigationBar: Container(
-      color:secondcolor,
-      height: 65,
-      child: Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      
-      children: [
-        Column(
-          
-          children: [
-              
-            
-            Icon(Icons.home,color:Colors.lightBlue,size: 30,),
-            Text("Home",style: TextStyle(color: Colors.white),)
-          ],
-        ),
-        Column(
-          children: [
-           
-            Icon(Icons.wallet,color:Colors.white,size: 30,),
-            Text("Wallet",style: TextStyle(color: Colors.white),)
-          ],
-        ),
-        InkWell(
-              onTap: ()=>{
-                   Navigator.of(context).pushNamed(MyRoutes.TrackRoute),
-              },
-                child: Container(
-                  child: Column(
-                    children: [ 
-                      Icon(Icons.track_changes,color:Colors.white,size: 30,),
-            Text("Track",style: TextStyle(color: Colors.white),), 
-            ],
-                  ),
-                ),
-              ),
-        
-        
-              InkWell(
-              onTap: ()=>{
-                   Navigator.of(context).pushNamed(MyRoutes.ProfileRoute),
-              },
-                child: Container(
-                  child: Column(
-                    children: [ 
-                      Icon(Icons.person,color:Colors.white,size: 30,),
-            Text("Profile",style: TextStyle(color: Colors.white),), 
-            ],
-                  ),
-                ),
-              ),
-      ],
-     ),
-     ),
-
-     
-     
-     
-
+   
 
     );
     

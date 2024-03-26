@@ -1,5 +1,5 @@
-import 'package:app/material.dart/routes.dart';
 import 'package:app/screens/homepage.dart';
+import 'package:app/screens/navigation.dart';
 import 'package:app/screens/profile.dart';
 import 'package:app/screens/track.dart';
 import 'package:app/screens/wallet.dart';
@@ -20,12 +20,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: "/",
       routes:{
-        "/":(context)=> Homepage(),
-        MyRoutes.WalletRoute:(context) => Wallet(),
-        MyRoutes.TrackRoute:(context) =>Track(),
-        MyRoutes.ProfileRoute:(context) => Profile(),
-        MyRoutes.HomepageRoute:(context) => Homepage(),
-
+        "/":(context)=>app(),
+       
 
       }
 

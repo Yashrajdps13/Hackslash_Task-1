@@ -1,5 +1,4 @@
 import 'package:app/material.dart/global.dart';
-import 'package:app/material.dart/routes.dart';
 import 'package:flutter/material.dart';
 
 class Wallet extends StatefulWidget {
@@ -427,72 +426,7 @@ class _WalletState extends State<Wallet> {
 
 
       ),
-       bottomNavigationBar: Container(
-      color:secondcolor,
-      height: 65,
-      child: Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      
-      children: [
-        Column(
-          
-          children: [
-              
-            
-            Icon(Icons.home,color:Colors.white,size: 30,),
-            Text("Home",style: TextStyle(color: Colors.white),)
-          ],
-        ),
-        Column(
-          children: [
-           
-            Icon(Icons.wallet,color:Colors.blue,size: 30,),
-            Text("Wallet",style: TextStyle(color: Colors.blue),)
-          ],
-        ),
-         InkWell(
-              onTap: ()=>{
-                   Navigator.of(context).pushNamed(MyRoutes.TrackRoute),
-              },
-                child: Container(
-                  child: Column(
-                    children: [ 
-                      Icon(Icons.track_changes,color:Colors.white,size: 30,),
-            Text("Track",style: TextStyle(color: Colors.white),), 
-            ],
-                  ),
-                ),
-              ),
-        
-        
-              InkWell(
-              onTap: ()=>{
-                   Navigator.of(context).pushNamed(MyRoutes.ProfileRoute),
-              },
-                child: Container(
-                  child: Column(
-                    children: [ 
-                      Icon(Icons.person,color:Colors.white,size: 30,),
-            Text("Profile",style: TextStyle(color: Colors.white),), 
-            ],
-                  ),
-                ),
-              ),
-            
-            
-            
-           
-          
-        
-        
-        
-        
-
-      ],
-     ),
-     )
-      
+       
     );
   }
 }
