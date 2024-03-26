@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:hackslash_task_1/utils/colors.dart';
 
@@ -8,6 +9,12 @@ class homePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool dark;
+    if(Theme.of(context).brightness==Brightness.dark){
+      dark = true;
+    }else{
+      dark =false;
+    }
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -18,10 +25,12 @@ class homePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TextFormField(
+              TextField(
                 decoration: InputDecoration(
                     fillColor: lightBackgroundColor,
                     filled: true,
+                    suffixIcon: Icon(Icons.search),
+                    suffixIconColor: Colors.white70,
                     contentPadding:
                         EdgeInsets.symmetric(vertical: 1, horizontal: 13),
                     focusedBorder: OutlineInputBorder(

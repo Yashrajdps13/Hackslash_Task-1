@@ -1,14 +1,30 @@
+
+
+
+
 import 'package:flutter/material.dart';
 import 'package:hackslash_task_1/mainPage.dart';
+import 'package:hackslash_task_1/utils/appStateNotifier.dart';
 import 'package:hackslash_task_1/utils/colors.dart';
 import 'package:hackslash_task_1/utils/routes.dart';
+import 'package:hackslash_task_1/utils/themes.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+
+}
+
+class _MyAppState extends State<MyApp> {
+
 
   // This widget is the root of your application.
   @override
@@ -17,15 +33,15 @@ class MyApp extends StatelessWidget {
       title: 'HackSlash App',
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
-      darkTheme: ThemeData(
+      darkTheme:MyAppTheme.darkTheme,/* ThemeData(
         useMaterial3: true,
           fontFamily: 'Roboto',
         appBarTheme: AppBarTheme(titleTextStyle: TextStyle(color: Colors.white70),backgroundColor: lightBackgroundColor),
         iconTheme: IconThemeData(color: Colors.white),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(unselectedItemColor: Colors.white70,backgroundColor: darkBackgroundColor),
         colorScheme: ColorScheme.fromSeed(seedColor: primaryColor,background: darkBackgroundColor,onSurface: Colors.white)
-      ),
-      theme: ThemeData(
+      ),*/
+      theme: MyAppTheme.lightTheme,/* ThemeData(
         // This is the theme of your application.
         //
         // TRY THIS: Try running your application with "flutter run". You'll see
@@ -45,12 +61,14 @@ class MyApp extends StatelessWidget {
         iconTheme: IconThemeData(color: Colors.white),
         fontFamily: 'Roboto',
         useMaterial3: true,
-      ),
+      ),*/
       initialRoute: MyRoutes.homePage,
       routes: {
       MyRoutes.homePage:(context) => mainPage(),
       },
     );
   }
+
 }
+
 

@@ -33,6 +33,7 @@ class _walletPageState extends State<walletPage> {
         ),
         backgroundColor: darkBackgroundColor,
         centerTitle: true,
+        elevation: 4,
       ),
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
@@ -62,7 +63,7 @@ class _walletPageState extends State<walletPage> {
                         Text("current balance: "),
                         Text(
                           "40,000",
-                          style: TextStyle(color: Colors.blueAccent),
+                          style: TextStyle(color: Colors.blueAccent,fontWeight: FontWeight.bold),
                         )
                       ],
                     ),
