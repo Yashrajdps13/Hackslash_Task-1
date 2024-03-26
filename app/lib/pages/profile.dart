@@ -33,15 +33,44 @@ class ProfileState extends State<Profile> {
             ),
             body: SizedBox(
               height: 700,
-              child: Column(
-                children: <Widget>[
-                  Expanded(
-                    child: ListView.builder(
-                        itemCount: settings.length,
-                        itemBuilder: (context, index) {
-                        return Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 24.0, horizontal: 48.0),
-                          child: Card(
+              child: Padding(
+                padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 48.0),
+                child: Column(
+                  children: [
+                    Spacer(),
+                    Container(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          CircleAvatar(
+                            backgroundImage: AssetImage("assets/images/pfp.png"),
+                          ),
+                          Column(children: [
+                            Text('Ken Nwaeze'),
+                            Row(
+                              children: [
+                                Text('Current balance:'),
+                                Text('N10,712:00',
+                                style: TextStyle(
+                                  color: Color.fromRGBO(5, 96, 250, 1)
+                                ),)
+                              ],
+                            )
+                          ],)
+                        ],
+                      ),
+                    ),
+                    Spacer(),
+                    Container(
+
+
+                    ),
+                    Spacer(),
+                    Expanded(
+                      child: ListView.builder(
+                          itemCount: settings.length,
+                          itemBuilder: (context, index) {
+                          return Card(
                               child: ListTile(
                                 tileColor: Color.fromRGBO(0, 27, 59, 1),
                                 textColor: Colors.white,
@@ -51,13 +80,13 @@ class ProfileState extends State<Profile> {
                                 subtitle: Text(settings[index].description),
                                 trailing: Icon(Icons.arrow_forward_ios_rounded),
                               ),
-                            ),
-                        );
+                            );
 
-                        }
+                          }
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
 
