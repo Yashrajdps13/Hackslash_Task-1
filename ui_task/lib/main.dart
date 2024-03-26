@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:ui_task/services/theme_provider.dart';
-import 'home.dart';
+import 'bottom_navigator.dart';
 
 void main() {
   runApp(

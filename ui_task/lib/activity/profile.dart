@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:ui_task/services/theme.dart';
 import 'package:ui_task/services/theme_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -12,7 +13,7 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
 
-  bool dark = true;
+  late bool dark = Provider.of<ThemeProvider>(context).themeData == darkMode;
 
   @override
   Widget build(BuildContext context) {
@@ -127,7 +128,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   },
                   child: Icon(
                     dark ? Icons.toggle_on_sharp: Icons.toggle_off_sharp,
-                    color: dark ? Color(0xff0560FA): Colors.grey,
+                    color: dark ? Color(0xff0560FA) : Colors.grey,
                     size: 40,
                   ),
                 )

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:provider/provider.dart';
+import 'package:ui_task/services/theme.dart';
+import 'package:ui_task/services/theme_provider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -57,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 75,
                     width: 100,
                     decoration: BoxDecoration(
-                        color: Color(0xff002858),
+                        color: Provider.of<ThemeProvider>(context).themeData==lightMode ? Color(0xff005ECE) : Color(0xff002858),
                         borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(300),
                             topRight: Radius.circular(8))),
@@ -69,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 75,
                     width: 100,
                     decoration: BoxDecoration(
-                        color: Color(0xff002858),
+                        color: Provider.of<ThemeProvider>(context).themeData==lightMode ? Color(0xff005ECE) : Color(0xff002858),
                         borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(8),
                             topRight: Radius.circular(300))),
@@ -339,7 +342,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         height: 138,
                         width: 160,
                         decoration: BoxDecoration(
-                            color: Theme.of(context).colorScheme.secondary,
+                            color: Color(0xff0560FA),
                             borderRadius: BorderRadius.circular(8)
                         ),
                         child: Padding(
@@ -350,12 +353,12 @@ class _HomeScreenState extends State<HomeScreen> {
                               SizedBox(height: 5,),
                               Container(
                                 height: 35,
-                                child: Image.asset('assets/icons/car.png',color: Color(0xff0560FA),),
+                                child: Image.asset('assets/icons/car.png',color: Colors.white,),
                               ),
                               SizedBox(height: 5,),
-                              Text("Book a rider",style: TextStyle(color: Color(0xff0560FA),fontSize: 16,fontFamily: 'Roboto',fontWeight: FontWeight.w500),),
+                              Text("Book a rider",style: TextStyle(color: Colors.white,fontSize: 16,fontFamily: 'Roboto',fontWeight: FontWeight.w500),),
                               SizedBox(height: 8,),
-                              Text("Search for available rider within your area",style: TextStyle(color: Theme.of(context).colorScheme.tertiary,fontSize: 7.45,fontFamily: 'Roboto',fontWeight: FontWeight.w500),),
+                              Text("Search for available rider within your area",style: TextStyle(color: Color(0xffCFCFCF),fontSize: 7.45,fontFamily: 'Roboto',fontWeight: FontWeight.w500),),
                             ],
                           ),
                         ),

@@ -19,24 +19,24 @@ class _HomeState extends State<Home> {
 
 
   int _currentIndex = 0;
-  List<Widget> screenlist = const [
-    HomeScreen(),
-    WalletScreen(),
-    TrackScreen(),
-    ProfileScreen(),
-  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
 
       backgroundColor: Theme.of(context).colorScheme.background,
-      body: IndexedStack(children: [
-        screenlist[_currentIndex]
-      ],),
+      body: IndexedStack(
+        index: _currentIndex,
+        children: <Widget>[
+          HomeScreen(),
+          WalletScreen(),
+          TrackScreen(),
+          ProfileScreen(),
+      ],
+      ),
 
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Theme.of(context).colorScheme.background,
         showUnselectedLabels: true,
         selectedIconTheme: const IconThemeData(color: Color(0xff0560FA)),
         selectedItemColor: const Color(0xff0560FA),
