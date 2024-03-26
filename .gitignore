@@ -1,0 +1,50 @@
+# Ignore Flutter build artifacts
+ui_task/build/
+ui_task/.dart_tool/
+ui_task/.packages
+ui_task/flutter_app.iml
+ui_task/.idea/
+
+# Ignore Android build artifacts
+ui_task/android/app/build/
+ui_task/android/build/
+
+# Ignore iOS build artifacts
+ui_task/ios/Pods/
+ui_task/ios/Podfile.lock
+ui_task/ios/Flutter/Flutter.framework/
+ui_task/ios/Flutter/Flutter.podspec
+ui_task/ios/Flutter/Generated.xcconfig
+ui_task/ios/Flutter/App.framework/
+ui_task/ios/Flutter/App.podspec
+ui_task/ios/Flutter/FlutterMacOS.framework/
+ui_task/ios/Flutter/FlutterMacOS.podspec
+
+# Ignore macOS build artifacts
+ui_task/macos/Flutter/Flutter.xcframework/
+ui_task/macos/Flutter/Flutter.podspec
+ui_task/macos/Flutter/Generated.xcconfig
+ui_task/macos/Flutter/FlutterMacOS.framework/
+
+# Ignore web build artifacts
+ui_task/web/build/
+ui_task/web/packages/
+
+# Ignore IntelliJ IDEA-specific files
+ui_task/*.iml
+ui_task/.idea/
+
+# Ignore Visual Studio Code-specific files
+ui_task/.vscode/
+
+# Ignore Xcode-specific files
+ui_task/*.mode1v3
+ui_task/*.pbxuser
+ui_task/*.perspectivev3
+ui_task/*.xcworkspace
+ui_task/*.xcuserdatad/
+
+# Ignore any other generated or user-specific files
+ui_task/*.lock
+ui_task/.metadata
+ui_task/*.log
