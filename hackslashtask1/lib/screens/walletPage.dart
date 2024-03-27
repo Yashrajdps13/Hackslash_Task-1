@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hackslashtask1/utils/colors.dart';
-import 'package:hackslashtask1/utils/global.dart';
+
 import 'package:hackslashtask1/utils/routes.dart';
 
 class WalletPage extends StatelessWidget {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hackslashtask1/utils/colors.dart';
-import 'package:hackslashtask1/utils/global.dart';
+
+import 'package:hackslashtask1/utils/thememanager.dart';
 import 'package:hackslashtask1/utils/routes.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -118,10 +119,11 @@ class ProfilePage extends StatelessWidget {
                                       fontWeight: FontWeight.bold),
                                 ),
                                 SizedBox(
-                                  width: 200,
+                                  width: 140,
                                 ),
-                                IconButton(onPressed: (){},
-                                 icon: Icon(Icons.toggle_on))
+                               Switch(value: _themeManager.themeMode==ThemeMode.dark, onChanged:(newValue) {
+                                _themeManager.toggleTheme(newValue);
+                               })
                               ],
                             ),
                             SizedBox(
@@ -570,5 +572,5 @@ class ProfilePage extends StatelessWidget {
   }
 }
 
-class SetState {
-}
+
+ThemeManager _themeManager =ThemeManager();
