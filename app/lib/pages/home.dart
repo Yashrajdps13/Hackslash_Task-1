@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/nav.dart';
+
 
 
 class Home extends StatefulWidget {
@@ -49,19 +49,26 @@ class _HomeState extends State<Home> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    child: Row(
                       children: [
-                        Text("Hello Ken",
-                            style: TextStyle(
-                              fontSize: 24,
-                              color: Colors.white,
-                            )),
-                        Text("We hope you are having a good time",
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: Colors.white,
-                            )),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Hello Ken",
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  color: Colors.white,
+                                )),
+                            Text("We trust you are having a good time",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.white,
+                                )),
+                          ],
+                        ),
+                        Spacer(),
+                        IconButton(onPressed: () {}, icon: Icon(Icons.notifications_outlined),
+                        color: Colors.white,)
                       ],
                     ),
                   ),
@@ -70,13 +77,23 @@ class _HomeState extends State<Home> {
               SizedBox(
                 height: 23,
               ),
-              Text('Special for you',
-                style: TextStyle(
-                    fontSize: 16,
-                    color: Color.fromRGBO(236, 128, 0, 1)
-                ),) ,
+              Container(
+                width: 338,
+                child: Row(
+                  children: [
+                    Text(' Special for you',
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Color.fromRGBO(236, 128, 0, 1)
+                      ),),
+                    Spacer(),
+                    Icon(Icons.arrow_forward_ios,size: 10,
+                    color:  Color.fromRGBO(236, 128, 0, 1),)
+                  ],
+                ),
+              ) ,
               SizedBox(
-                height: 10,
+                height: 7,
               ),
               Container(
                 width: 341,
@@ -90,7 +107,27 @@ class _HomeState extends State<Home> {
                         child: Container(
                           height: 64,
                           width: 166,
+                          child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Tech Meet up',
+                                style: TextStyle(
+                                  fontSize: 10,
+                                  color: Colors.white
+                                ),),
+                                Text('Coming soon',
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      color: Colors.white
+                                  ),)
+                              ],
+                            ),
+                          ),
                           decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Color.fromRGBO(236, 128, 0, 1),),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
                                 image: AssetImage("assets/images/techmeetup.png")
@@ -130,6 +167,10 @@ class _HomeState extends State<Home> {
                           height: 64,
                           width: 166,
                           decoration: BoxDecoration(
+                            image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage("assets/images/genius.png")
+                            ),
                           ),),
                       ),
                       SizedBox(width: 12.0),
@@ -148,10 +189,9 @@ class _HomeState extends State<Home> {
                     ],),
                 ),
               ),
-          
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20.0),
-                child: Text('What would you like to do?',
+                padding: const EdgeInsets.symmetric(vertical: 24.0),
+                child: Text(' What would you like to do?',
                   style: TextStyle(
                       fontSize: 16,
                       color: Color.fromRGBO(5, 96, 250, 1)
@@ -202,7 +242,7 @@ class _HomeState extends State<Home> {
                         width: 159,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5.0),
-                          color: Color.fromRGBO(5, 96, 250, 1),
+                          color: Color.fromRGBO(0, 27, 59, 1),
                         ),
                       )
                     ],),
@@ -232,31 +272,11 @@ class _HomeState extends State<Home> {
                     SizedBox(
                       height: 23,
                     ),
-                    Row(children: [
-                      Container(
-                        height: 159,
-                        width: 159,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5.0),
-                          color: Color.fromRGBO(0, 27, 59, 1),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 23,
-                      ),
-                      Container(
-                        height: 159,
-                        width: 159,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5.0),
-                          color: Color.fromRGBO(0, 27, 59, 1),
-                        ),)
-                    ],)
                   ],),
                 ),
               )
             ],
-          
+
           ),
         ),
       ),

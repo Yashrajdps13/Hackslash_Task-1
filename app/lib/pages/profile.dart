@@ -11,6 +11,8 @@ class Profile extends StatefulWidget {
 }
 
 class ProfileState extends State<Profile> {
+  bool _switchValue = true;
+
   List<IconData> icons = [Icons.person, Icons.text_snippet, Icons.notifications, Icons.credit_card, Icons.share, Icons.image, Icons.logout];
   List<Settings> settings = [
   Settings(settingsname: 'Edit Profile', description: 'Name, Phone Number, Address, Email'),
@@ -25,13 +27,15 @@ class ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Scaffold (
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(0, 27, 59, 1),
+        backgroundColor:Color.fromRGBO(0, 27, 59, 1),
         centerTitle: true,
         title: Text('Profile',
           style: TextStyle(
-              color: Colors.grey
+              color: Colors.grey,
+            fontSize: 18.0,
           ),),
         leading: Icon(Icons.arrow_back_ios,
+          size: 15,
           color: Color.fromRGBO(5, 96, 250, 1),),
       ),
       body: SizedBox(
@@ -55,7 +59,7 @@ class ProfileState extends State<Profile> {
                       children: [
                         Text('Ken Nwaeze',
                           style: TextStyle(
-                              color: Colors.white
+                              color: Colors.white,
                           ),),
                         Row(
                           children: [
@@ -69,25 +73,32 @@ class ProfileState extends State<Profile> {
                               ),)
                           ],
                         )
-                      ],)
+                      ],),
+                    Spacer(),
+                    Icon(Icons.visibility_off_outlined,
+                    color: Colors.grey,
+                    size: 20,)
                   ],
                 ),
               ),
               SizedBox(
-                height: 27,
+                height: 15,
               ),
               Container(
                 child: Row(
                   children: [
                     Text('Enable Dark mode',
                       style: TextStyle(
-                          color: Colors.white
-                      ),)
+                          color: Colors.white,
+                      ),),
+                    Spacer(),
+                    Switch(value: _switchValue, onChanged: (newV) {},
+                    activeTrackColor: Color.fromRGBO(5, 96, 250, 1),),
                   ],
                 ),
               ),
               SizedBox(
-                height: 27,
+                height: 15,
               ),
               Expanded(
                 child: ListView.builder(

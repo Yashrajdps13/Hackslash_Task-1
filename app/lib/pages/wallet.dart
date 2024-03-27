@@ -30,13 +30,15 @@ class _WalletState extends State<Wallet> {
     return Scaffold(
 
         appBar: AppBar(
-          backgroundColor: Color.fromRGBO(0, 27, 59, 1),
+          backgroundColor:  Color.fromRGBO(0, 27, 59, 1),
           centerTitle: true,
           title: Text('Wallet',
             style: TextStyle(
-                color: Colors.grey
+                color: Colors.grey,
+              fontSize: 18
             ),),
           leading: Icon(Icons.arrow_back_ios,
+            size: 15.0,
             color: Color.fromRGBO(5, 96, 250, 1),),
         ),
         body: Padding(
@@ -72,7 +74,11 @@ class _WalletState extends State<Wallet> {
                                 ),)
                             ],
                           )
-                        ],)
+                        ],),
+                      Spacer(),
+                      Icon(Icons.visibility_off_outlined,
+                        color: Colors.grey,
+                        size: 20,)
                     ],
                   ),
 
@@ -161,8 +167,7 @@ class _WalletState extends State<Wallet> {
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 20
-                  ),
-                  textAlign: TextAlign.left,),
+                  ),),
                 SizedBox(
                   height: 10.0,
                 ),
@@ -173,9 +178,9 @@ class _WalletState extends State<Wallet> {
                         return Card(
                           child: ListTile(
                             tileColor: Color.fromRGBO(0, 27, 59, 1),
-                            textColor: Colors.white,
                             title: Text(transactions[index].action,
                               style: TextStyle(
+                                color: Colors.white,
                                   fontSize: 14
                               ),
                             ),

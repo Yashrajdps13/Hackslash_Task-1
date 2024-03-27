@@ -61,6 +61,7 @@ class _TrackState extends State<Track> {
                                 fontSize: 14
                             ),),
                           CheckboxListTile(
+                          activeColor: Color.fromRGBO(5, 96, 250, 1),
                             title: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -82,6 +83,7 @@ class _TrackState extends State<Track> {
                           ),
 
                           CheckboxListTile(
+                            activeColor: Color.fromRGBO(5, 96, 250, 1),
                             title: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [

@@ -1,8 +1,4 @@
-import 'package:app/pages/home.dart';
-import 'package:app/pages/profile.dart';
-import 'package:app/pages/track.dart';
-import 'package:app/pages/wallet.dart';
-import 'package:app/utilis/routes.dart';
+
 import 'package:app/widgets/nav.dart';
 import 'package:flutter/material.dart';
 
@@ -19,11 +15,11 @@ class MyApp extends StatelessWidget {
         bottomNavigationBar: NavBar(),
       ),
       theme: ThemeData( scaffoldBackgroundColor: Color.fromRGBO(0, 13, 29, 1),
-      appBarTheme: AppBarTheme(
-        color: Color.fromRGBO(0, 27, 59, 1)
-      )),
-    debugShowCheckedModeBanner: false,
+          appBarTheme: AppBarTheme(
+              color: Color.fromRGBO(0, 27, 59, 1)
+          )),
+      debugShowCheckedModeBanner: false,
 
     );
-}
+  }
 }
