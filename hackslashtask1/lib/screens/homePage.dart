@@ -3,12 +3,19 @@ import 'package:hackslashtask1/utils/colors.dart';
 
 import 'package:hackslashtask1/utils/routes.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    TextTheme _textTheme =Theme.of(context).textTheme;
+    
+  return Scaffold(
       body: SafeArea(
           child: SingleChildScrollView(
         child: Container(

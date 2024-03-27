@@ -3,9 +3,14 @@ import 'package:hackslashtask1/utils/colors.dart';
 
 import 'package:hackslashtask1/utils/routes.dart';
 
-class TrackPage extends StatelessWidget {
+class TrackPage extends StatefulWidget {
   const TrackPage({super.key});
 
+  @override
+  State<TrackPage> createState() => _TrackPageState();
+}
+
+class _TrackPageState extends State<TrackPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
