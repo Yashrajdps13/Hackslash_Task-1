@@ -5,6 +5,7 @@ import 'package:hackslashtask1/screens/homePage.dart';
 import 'package:hackslashtask1/screens/profilePage.dart';
 import 'package:hackslashtask1/screens/trackPage.dart';
 import 'package:hackslashtask1/screens/walletPage.dart';
+import 'package:hackslashtask1/utils/global.dart';
 import 'package:hackslashtask1/utils/routes.dart';
 
 
@@ -18,6 +19,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      themeMode: ThemeMode.system,
+      theme: Themeclass.LightTheme,
+      darkTheme: Themeclass.darkTheme,
      debugShowCheckedModeBanner: false,
      initialRoute: "/",
      routes: {

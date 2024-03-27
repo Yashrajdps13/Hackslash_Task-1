@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hackslashtask1/utils/colors.dart';
 import 'package:hackslashtask1/utils/global.dart';
 import 'package:hackslashtask1/utils/routes.dart';
 
@@ -119,17 +120,17 @@ class ProfilePage extends StatelessWidget {
                                 SizedBox(
                                   width: 200,
                                 ),
-                                Icon(
-                                  Icons.toggle_on,
-                                  color: selectedBlue,
-                                )
+                                IconButton(onPressed: (){},
+                                 icon: Icon(Icons.toggle_on))
                               ],
                             ),
                             SizedBox(
                               height: 15,
                             ),
                             Container(
+                            
                               height: 60,
+                              
                               width: MediaQuery.of(context).size.width,
                               padding: EdgeInsets.symmetric(horizontal: 20),
                               decoration: ShapeDecoration(
@@ -137,6 +138,7 @@ class ProfilePage extends StatelessWidget {
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(2))),
                                 color: darkbackgroundColor2,
+                                
                               ),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -566,4 +568,7 @@ class ProfilePage extends StatelessWidget {
 
     );
   }
+}
+
+class SetState {
 }
